@@ -26,3 +26,11 @@ fp-info-cache
 *.xml
 *.csv
 
+
+#### STM32CubeIDE ####
+.metadata
+.settings
+[Rr]elease
+[Dd]ebug
+.launch
+
