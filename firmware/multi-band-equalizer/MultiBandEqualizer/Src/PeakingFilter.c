@@ -42,7 +42,6 @@ void PeakingFilter_Set_Coefficients(PeakingFilter *filter, PeakingFilterParamete
 	float Q = filter_params->center_freq_hz / filter_params->bandwidth_hz;
 
 
-
 	/*
 	 * Compute our filter coefficients
 	 */

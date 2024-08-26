@@ -151,7 +151,8 @@ void process_audio_data()
 		// Convert int16_t to floats for processing
 		left_input_sample = (float) audio_in_buff_ptr[i];
 		// Apply our processing onto our input sample to generate our output sample
-		left_output_sample = 1.0f * left_input_sample;
+//		left_output_sample = 0.5f * left_input_sample;
+		left_output_sample = PeakingFilter_Update(&filter_1, left_input_sample);
 		// Fill our DAC output buffer
 		audio_out_buff_ptr[i] = (int16_t) left_output_sample;
 
@@ -161,7 +162,8 @@ void process_audio_data()
 		// Convert int16_t to floats for processing
 		right_input_sample = (float) audio_in_buff_ptr[i+1];
 		// Apply our processing onto our input sample to generate our output sample
-		right_output_sample = 1.0f * right_input_sample;
+//		right_output_sample = 0.5f * right_input_sample;
+		right_output_sample = PeakingFilter_Update(&filter_1, right_input_sample);
 		// Fill our DAC output buffer
 		audio_out_buff_ptr[i+1] = (int16_t) right_output_sample;
 	}
@@ -242,16 +244,16 @@ int main(void)
 		  process_audio_data();
 	  }
 
-	  for (size_t i=0; i<NUM_CONTROL_KNOBS; ++i)
-	  {
-		  if (i == 0)
-		  {
-			  sprintf(uart_buff, "Control Knob %i Voltage: %lf \r\n", i+1, control_knobs_buff_voltage[i]);
-			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
-		  }
-//		  sprintf(uart_buff, "Control Knob %i Voltage: %lf \r\n", i+1, control_knobs_buff_voltage[i]);
-//		  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
-	  }
+//	  for (size_t i=0; i<NUM_CONTROL_KNOBS; ++i)
+//	  {
+//		  if (i == 0)
+//		  {
+//			  sprintf(uart_buff, "Control Knob %i Voltage: %lf \r\n", i+1, control_knobs_buff_voltage[i]);
+//			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
+//		  }
+////		  sprintf(uart_buff, "Control Knob %i Voltage: %lf \r\n", i+1, control_knobs_buff_voltage[i]);
+////		  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
+//	  }
 
 	  HAL_Delay(10);
   }

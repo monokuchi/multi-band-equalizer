@@ -13,12 +13,23 @@
 /*
  * INCLUDES
  */
+#include <string.h>
+
 #include "CS4272.h"
 
 
 
 
-
+const uint8_t CS4272_REGISTERS[CS4272_NUM_REGISTERS] = {
+															CS4272_REG_MODE_CTRL_1,
+															CS4272_REG_DAC_CTRL,
+															CS4272_REG_DAC_VOL_MIX_CTRL,
+															CS4272_REG_DAC_CH_A_VOL_CTRL,
+															CS4272_REG_DAC_CH_B_VOL_CTRL,
+															CS4272_REG_ADC_CTRL,
+															CS4272_REG_MODE_CTRL_2,
+															CS4272_REG_CHIP_ID
+														};
 
 
 
@@ -31,27 +42,28 @@ uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c)
 	 * Set CS4272 struct parameters
 	 */
 	dev->i2c_handle = i2c;
-
-
-
-	// Set up error tracking
-	uint16_t error_count = 0;
-	HAL_StatusTypeDef status = HAL_OK;
-	// Stores the data we pull from the registers
-	uint8_t reg_data = 0x00;
+	// Reset register_map
+	memset(dev->register_map, 0, sizeof(dev->register_map));
 
 
 	/*
-	 * Check for correct Chip ID and Revision
+	 * Variables needed for initialization procedure
 	 */
-	status = CS4272_Read_Register(dev, CS4272_REG_CHIP_ID, &reg_data);
-	if (status != HAL_OK) { ++error_count; }
+	HAL_StatusTypeDef status = HAL_OK;
+	// Stores the data we pull from the registers
+	uint8_t reg_data = 0x00;
+	// Register settings for initialization
+	uint8_t CS4272_REGISTERS_INIT_CONFIG[CS4272_NUM_REGISTERS] = {
+																	 0x28, 									   // MCLK/LRCK = 512 and SCLK/LRCK = 64, Master Mode
+																	 0x80, 									   // Auto Mute
+																	 0x29, 									   // Soft Ramp, ATAPI Channel Mixing (enable aL, bR)
+																	 0x00,
+																	 0x00,
+																	 0x00,
+																	 0x03, 									   // Control Port Enable, Power Down
+																	 ((CS4272_CHIP_ID << 4) | CS4272_CHIP_REV)  // Device part and revision number
+																 };
 
-	if (reg_data != ((CS4272_CHIP_ID << 4) | CS4272_CHIP_REV))
-	{
-		// Chip ID and Revision does not match, throw error
-		return 255;
-	}
 
 
 
@@ -64,60 +76,85 @@ uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c)
 	// Bring nRST high to turn the device on again
 	HAL_GPIO_WritePin(CS4272_NRST_GPIO_PORT, CS4272_NRST_GPIO_PIN, GPIO_PIN_SET);
 
-	// Set the Control Port Enable (CPEN) and Power Down (PDN) bits
-	// Need to write 03h to register 07h within 10 ms of releasing NRST
-	reg_data = 0x03;
-	status = CS4272_Write_Register(dev, CS4272_REG_MODE_CTRL_2, &reg_data);
-	if (status != HAL_OK) { ++error_count; }
 
 
-	/*
-	 * Set custom register values
-	 */
-	// Set clocking ratios to MCLK/LRCK = 512 and SCLK/LRCK = 64 (Pg 28)
-	// Set Master mode, since default mode is Slave mode in Control Port Mode (Pg 27)
-	// Final byte in register 0x01 needs to be 0b00101000 or 0x28
-	reg_data = 0x28;
-	status = CS4272_Write_Register(dev, CS4272_REG_MODE_CTRL_1, &reg_data);
-	if (status != HAL_OK) { ++error_count; }
+	uint8_t tmp_data = 0x05;
+	status = CS4272_Write_Register(dev, CS4272_REG_DAC_CTRL, &tmp_data);
+	status = CS4272_Read_Register(dev, CS4272_REG_DAC_CTRL, &tmp_data);
 
 
 
 	/*
-	 * Once finished clear PDN bit to start the chip up with the new settings
+	 * Write the desired initialization register values
 	 */
-	reg_data = 0x03;
-	status = CS4272_Write_Register(dev, CS4272_REG_MODE_CTRL_2, &reg_data);
-	if (status != HAL_OK) { ++error_count; }
+	for (size_t i=CS4272_NUM_REGISTERS-1; i>=0; --i)
+	{
+		// Write the corresponding initialization configuration value into the register
+		status = CS4272_Write_Register(dev, CS4272_REGISTERS[i], &CS4272_REGISTERS_INIT_CONFIG[i]);
+		if (status != HAL_OK) { return i; }
 
-
+		// Read back what we just wrote and double check the contents
+		status = CS4272_Read_Register(dev, CS4272_REGISTERS[i], &reg_data);
+		if (status != HAL_OK || reg_data != CS4272_REGISTERS_INIT_CONFIG[i-1]) { return i; }
+	}
 
 
 	/*
-	 * Return total error count (should be 0 if everything went well)
+	 * Read in and store the current state of all the registers
 	 */
-	return error_count;
+	status = CS4272_Read_All_Registers(dev, dev->register_map);
+	if (status != HAL_OK) { return 255; }
+
+
+//	/*
+//	 * Once finished clear PDN bit to start the chip up with the new settings
+//	 */
+//	reg_data = 0x02;
+//	status = CS4272_Write_Register(dev, CS4272_REG_MODE_CTRL_2, &reg_data);
+//	if (status != HAL_OK) { ++error_count; }
+//	// Wait a bit for the codec to power up
+//	HAL_Delay(100);
+
+
+	/*
+	 * Return 0 to indicate everything went well)
+	 */
+	return 0;
 }
 
 
 HAL_StatusTypeDef CS4272_Read_Register(CS4272 *dev, uint8_t reg, uint8_t *data)
 {
-	return HAL_I2C_Mem_Read(dev->i2c_handle, CS4272_I2C_ADDR, reg, sizeof(reg), data, 1, HAL_MAX_DELAY);
+	return HAL_I2C_Mem_Read(dev->i2c_handle, CS4272_I2C_ADDR, reg, I2C_MEMADD_SIZE_8BIT, data, 1, HAL_MAX_DELAY);
 }
-
-
 
 
 HAL_StatusTypeDef CS4272_Write_Register(CS4272 *dev, uint8_t reg, uint8_t *data)
 {
-	return HAL_I2C_Mem_Write(dev->i2c_handle, CS4272_I2C_ADDR, reg, sizeof(reg), data, 1, HAL_MAX_DELAY);
+	return HAL_I2C_Mem_Write(dev->i2c_handle, CS4272_I2C_ADDR, reg, I2C_MEMADD_SIZE_8BIT, data, 1, HAL_MAX_DELAY);
 }
 
+HAL_StatusTypeDef CS4272_Read_All_Registers(CS4272 *dev, uint8_t *data)
+{
+	HAL_StatusTypeDef status = HAL_OK;
+	for (size_t i=0; i<CS4272_NUM_REGISTERS; ++i)
+	{
+		status = CS4272_Read_Register(dev, CS4272_REGISTERS[i], &data[i]);
+		if (status != HAL_OK) { return status; }
+	}
+	return status;
+}
 
-
-
-
-
+HAL_StatusTypeDef CS4272_Write_All_Registers(CS4272 *dev, uint8_t *data)
+{
+	HAL_StatusTypeDef status = HAL_OK;
+	for (size_t i=0; i<CS4272_NUM_REGISTERS; ++i)
+	{
+		status = CS4272_Write_Register(dev, CS4272_REGISTERS[i], &data[i]);
+		if (status != HAL_OK) { return status; }
+	}
+	return status;
+}
 
 
 
