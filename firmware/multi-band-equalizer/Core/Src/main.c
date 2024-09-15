@@ -39,6 +39,8 @@
 #define AUDIO_SAMPLE_RATE_HZ 48000.0f
 #define NUM_CONTROL_KNOBS 6
 #define ADC_RAW_TO_VOLTAGE_CONV_FACTOR 0.0000508634063223f // 3.333 / (2^16 - 1)
+#define INT16_TO_FLOAT 0.000030517578125f // 1 / 32768
+#define FLOAT_TO_INT16 32768.0f // 2^16 / 2
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -143,7 +145,7 @@ void process_audio_data()
 	static float right_input_sample = 0.0;
 	static float right_output_sample = 0.0;
 
-	for (size_t i=0; i<(AUDIO_DATA_BUFFER_SIZE/2)-1; i+=2)
+	for (size_t i=0; i<(size_t) ((AUDIO_DATA_BUFFER_SIZE/2)-1); i+=2)
 	{
 		/*
 		 * Left Channel
@@ -215,6 +217,7 @@ int main(void)
   // Start timer 2 for clocking ADC 1
   HAL_TIM_Base_Start(&htim2);
 
+
   // Initialize our codec
   CS4272_Init(&codec, &hi2c1);
   // Initialize our Peaking Filters
@@ -225,8 +228,10 @@ int main(void)
 //  PeakingFilter_Init(&filter_5, AUDIO_SAMPLE_RATE_HZ);
 //  PeakingFilter_Init(&filter_6, AUDIO_SAMPLE_RATE_HZ);
 
+
   // Initialize our I2S data stream
-  HAL_I2SEx_TransmitReceive_DMA(&hi2s1, (uint16_t *) audio_dac_buff, (uint16_t *) audio_adc_buff, AUDIO_DATA_BUFFER_SIZE);
+  HAL_StatusTypeDef status = HAL_I2SEx_TransmitReceive_DMA(&hi2s1, (uint16_t *) audio_dac_buff, (uint16_t *) audio_adc_buff, AUDIO_DATA_BUFFER_SIZE);
+
 
   /* USER CODE END 2 */
 

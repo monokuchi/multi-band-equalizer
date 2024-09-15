@@ -47,6 +47,8 @@
 #define CS4272_REG_CHIP_ID     		 0x08
 
 extern const uint8_t CS4272_REGISTERS[CS4272_NUM_REGISTERS];
+// Default register settings for initialization
+extern uint8_t CS4272_REGISTERS_INIT_CONFIG[CS4272_NUM_REGISTERS];
 
 
 /*
@@ -66,8 +68,9 @@ typedef struct
 /*
  * FUNCTIONS
  */
-uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c);
+void CS4272_Reset();
 
+uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c);
 
 HAL_StatusTypeDef CS4272_Read_Register(CS4272 *dev, uint8_t reg, uint8_t *data);
 HAL_StatusTypeDef CS4272_Write_Register(CS4272 *dev, uint8_t reg, uint8_t *data);
