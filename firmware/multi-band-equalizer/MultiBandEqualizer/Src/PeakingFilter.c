@@ -33,6 +33,14 @@ void PeakingFilter_Init(PeakingFilter *filter, float sample_rate_hz)
 	PeakingFilter_Set_Coefficients(filter, &default_filter_params);
 }
 
+void PeakingFilters_Init(PeakingFilter *filters, size_t filters_size, float sample_rate_hz)
+{
+	for (size_t i=0; i<filters_size; ++i)
+	{
+		PeakingFilter_Init(&filters[i], sample_rate_hz);
+	}
+}
+
 void PeakingFilter_Set_Coefficients(PeakingFilter *filter, PeakingFilterParameters *filter_params)
 {
 	// Compute the pre-warp cut off frequency * T -> w_cd * T = (2/T) * tan(w_c * T/2) * T = 2*tan(pi * f_c * T)
@@ -74,5 +82,19 @@ float PeakingFilter_Update(PeakingFilter *filter, float input_sample)
 	filter->y[1] = filter->y[0];
 	filter->y[2] = filter->y[1];
 
+	return output_sample;
+}
+
+float PeakingFilter_Update_Cascade(PeakingFilter *filters, size_t filters_size, float input_sample)
+{
+	/*
+	 * Cascades the peaking filters provided by "filters" and runs our input sample through them
+	 * As we go away from f_c we get unity gain, this property of peaking filters allows us to cascade them properly
+	 */
+	float output_sample = input_sample;
+	for (size_t i=0; i<filters_size; ++i)
+	{
+		output_sample = PeakingFilter_Update(&filters[i], output_sample);
+	}
 	return output_sample;
 }

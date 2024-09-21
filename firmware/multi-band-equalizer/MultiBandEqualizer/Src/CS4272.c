@@ -66,7 +66,7 @@ uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c)
 	 */
 	dev->i2c_handle = i2c;
 	// Reset register_map
-	memset(dev->register_map, 0, sizeof(dev->register_map));
+	memset(dev->register_map, 0, CS4272_NUM_REGISTERS);
 
 
 	/*

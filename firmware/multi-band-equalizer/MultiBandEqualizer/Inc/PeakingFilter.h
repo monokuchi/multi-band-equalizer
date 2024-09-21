@@ -49,7 +49,6 @@ typedef struct
 	 */
 	float a[3];
 	float b[3];
-
 } PeakingFilter;
 
 
@@ -60,8 +59,7 @@ typedef struct
 {
 	float center_freq_hz;
 	float bandwidth_hz;
-	float gain_linear;
-
+	float gain_linear; // Gain=1 -> All Pass, Gain>1 -> Boost, 0<Gain<1 -> Cut
 } PeakingFilterParameters;
 
 
@@ -73,9 +71,13 @@ typedef struct
  */
 void PeakingFilter_Init(PeakingFilter *filter, float sample_rate_hz);
 
+void PeakingFilters_Init(PeakingFilter *filters, size_t filters_size, float sample_rate_hz);
+
 void PeakingFilter_Set_Coefficients(PeakingFilter *filter, PeakingFilterParameters *filter_params);
 
 float PeakingFilter_Update(PeakingFilter *filter, float input_sample);
+
+float PeakingFilter_Update_Cascade(PeakingFilter *filters, size_t filters_size, float input_sample);
 
 
 

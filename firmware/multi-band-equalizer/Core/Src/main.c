@@ -26,6 +26,7 @@
 
 #include "CS4272.h"
 #include "PeakingFilter.h"
+#include "EMAFilter.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,12 +36,17 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define AUDIO_DATA_BUFFER_SIZE 128
-#define AUDIO_SAMPLE_RATE_HZ 48000.0f
-#define NUM_CONTROL_KNOBS 6
-#define ADC_RAW_TO_VOLTAGE_CONV_FACTOR 0.0000508634063223f // 3.333 / (2^16 - 1)
-#define INT16_TO_FLOAT 0.000030517578125f // 1 / 32768
-#define FLOAT_TO_INT16 32768.0f // 2^16 / 2
+#define AUDIO_DATA_BUFFER_SIZE  128
+#define AUDIO_SAMPLE_RATE_HZ 	48000.0f
+
+#define NUM_CTRL_KNOBS 		 8 // 7 Frequency Bands, 1 Volume Level
+#define NUM_FREQ_BANDS 		 7
+#define CTRL_KNOBS_DEADBAND  0.05f
+#define CTRL_KNOBS_EMA_ALPHA 0.85f // Alpha factor for EMA Low Pass Filter (Lower alpha -> Lower cutoff frequency)
+
+#define ADC_RAW_NORMALIZATION_FACTOR 65535 // 2^16 - 1
+#define INT16_TO_FLOAT 				 0.000030517578125f // 1 / 32768
+#define FLOAT_TO_INT16 				 32768.0f // 2^16 / 2
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -63,32 +69,44 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-// CS4272 codec struct
+// CS4272 Codec
 CS4272 codec;
-// Peaking filters struct
-PeakingFilter filter_1;
-//PeakingFilter filter_2;
-//PeakingFilter filter_3;
-//PeakingFilter filter_4;
-//PeakingFilter filter_5;
-//PeakingFilter filter_6;
+
+// Array to hold our peaking filters
+PeakingFilter peaking_filters[NUM_FREQ_BANDS];
+// Struct to hold our filter parameters that can be changed by the control knobs
+PeakingFilterParameters peaking_filters_params[NUM_FREQ_BANDS];
+
+// EMA Low Pass Filters for the Control Knobs
+EMAFilter ema_filters[NUM_CTRL_KNOBS];
 
 // Ping Pong buffers for our codec's ADC and DAC
 volatile int16_t audio_adc_buff[AUDIO_DATA_BUFFER_SIZE];
 volatile int16_t audio_dac_buff[AUDIO_DATA_BUFFER_SIZE];
-
 // Access pointers to our audio data buffers
 static volatile int16_t *audio_in_buff_ptr = &audio_adc_buff[0];
 static volatile int16_t *audio_out_buff_ptr = &audio_dac_buff[0];
-
 // Flag to indicate that our current in buffer has filled up and is ready to be switched
 // with the out buffer
-volatile uint8_t audio_buff_rdy_flg = 0;
+volatile uint8_t audio_buff_samples_rdy = 0;
 
-// Buffer to hold our sampled control knob signals
-volatile uint16_t control_knobs_buff[NUM_CONTROL_KNOBS];
-// Buffer to hold our sampled control knob signals in terms of voltage
-volatile float 	  control_knobs_buff_voltage[NUM_CONTROL_KNOBS];
+// Buffer to hold our raw sampled control knob signals
+volatile uint16_t ctrl_knobs_settings_raw[NUM_CTRL_KNOBS] = {0};
+// Buffer to hold our control knob signals normalized to [0.0, 1.0] (First 7 are frequency bands, Last is Volume Level)
+volatile float 	  ctrl_knobs_settings[NUM_CTRL_KNOBS] = {0};
+// Buffer to hold memory of the control knob samples for low pass filtering purposes/deadband calculations
+volatile float    prev_ctrl_knobs_settings[NUM_CTRL_KNOBS] = {0};
+
+volatile uint8_t  ctrl_knobs_adc_samples_rdy = 0;
+// Flag to indicate control knobs are being changed
+volatile uint8_t  ctrl_knobs_adc_lock = 0;
+// Lock to make sure we don't change ctrl_knobs_settings in the middle of processing
+volatile uint8_t  ctrl_knobs_audio_proc_lock = 0;
+// Toggle to modify either the filter's gain (mode_select=0) or the bandwidth (mode_select=1)
+volatile uint8_t mode_select = 0;
+
+// Keeps track of the audio output level (Left and Right channels are equally leveled)
+volatile float output_volume_level = 1.0f;
 
 // Buffer used for UART transmission
 char              uart_buff[128];
@@ -109,15 +127,79 @@ static void MX_I2S1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 // Callback for our control knobs
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
-	for (size_t i=0; i<NUM_CONTROL_KNOBS; ++i)
+	if (!ctrl_knobs_adc_lock)
 	{
-		// Convert raw ADC samples from the control knobs to voltages
-		control_knobs_buff_voltage[i] = ADC_RAW_TO_VOLTAGE_CONV_FACTOR * (float) control_knobs_buff[i];
+		for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
+		{
+			// Convert raw ADC samples from the control knobs to floats and normalize to [0.0, 1.0]
+			ctrl_knobs_settings[i] = (float) (ctrl_knobs_settings_raw[i]) / ADC_RAW_NORMALIZATION_FACTOR;
+		}
+		ctrl_knobs_adc_samples_rdy = 1;
 	}
 }
+
+// Converts processed control knob samples into filter parameters
+void processControlKnobs()
+{
+	// Set our lock to prevent the ADC from updating the ctrl_knobs_settings during this function call
+	ctrl_knobs_adc_lock = 1;
+
+	if (!ctrl_knobs_audio_proc_lock)
+	{
+		for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
+		{
+			// Low Pass Filter the control knob signals
+			prev_ctrl_knobs_settings[i] = ctrl_knobs_settings[i];
+			ctrl_knobs_settings[i] = EMAFilter_Update(&ema_filters[i], ctrl_knobs_settings[i]);
+
+			if (i != NUM_CTRL_KNOBS-1)
+			{
+				if (fabs(ctrl_knobs_settings[i]-prev_ctrl_knobs_settings[i]) > CTRL_KNOBS_DEADBAND)
+				{
+					// If we are past the deadband then update our filter_params
+
+					// Center Frequencies are fixed and go from [100, 6400] Hz
+					peaking_filters_params[i].center_freq_hz = 100.0f * powf(2.0f, (float) i);
+
+					if (!mode_select)
+					{
+						// Update the filter gain
+						peaking_filters_params[i].gain_linear = 2.0f * ctrl_knobs_settings[i];
+					}
+					else
+					{
+						// Update the filter bandwidth
+						peaking_filters_params[i].bandwidth_hz = (1000.0f * ctrl_knobs_settings[i]) + 1.0f;
+						if (peaking_filters_params[i].bandwidth_hz > peaking_filters_params[i].center_freq_hz)
+						{
+							// Since the center frequencies are not evenly spaced out we also need to make the bandwidth skewed
+							peaking_filters_params[i].bandwidth_hz = peaking_filters_params[i].center_freq_hz;
+						}
+					}
+
+					// Update our filter with our new parameters
+					PeakingFilter_Set_Coefficients(&peaking_filters[i], &peaking_filters_params[i]);
+				}
+			}
+			else
+			{
+				// Set output_level
+				output_volume_level = 2.0f * ctrl_knobs_settings[i];
+			}
+		}
+	}
+
+	// Reset ctrl_knobs_adc_lock
+	ctrl_knobs_adc_lock = 0;
+	// Reset ctrl_knobs_adc_samples_rdy to indicate we need a new batch of ctrl_knobs_settings samples from the ADC
+	ctrl_knobs_adc_samples_rdy = 0;
+}
+
+
 
 // Callbacks for ping ponging I2S audio TX and RX buffers
 void HAL_I2SEx_TxRxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
@@ -125,7 +207,7 @@ void HAL_I2SEx_TxRxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
 	audio_in_buff_ptr = &audio_adc_buff[0];
 	audio_out_buff_ptr = &audio_dac_buff[0];
 
-	audio_buff_rdy_flg = 1;
+	audio_buff_samples_rdy = 1;
 }
 
 void HAL_I2SEx_TxRxCpltCallback(I2S_HandleTypeDef *hi2s)
@@ -133,12 +215,15 @@ void HAL_I2SEx_TxRxCpltCallback(I2S_HandleTypeDef *hi2s)
 	audio_in_buff_ptr = &audio_adc_buff[AUDIO_DATA_BUFFER_SIZE/2];
 	audio_out_buff_ptr = &audio_dac_buff[AUDIO_DATA_BUFFER_SIZE/2];
 
-	audio_buff_rdy_flg = 1;
+	audio_buff_samples_rdy = 1;
 }
 
 // Function that processes the audio data held in the buffers
-void process_audio_data()
+void processAudioData()
 {
+	// Set our control knob lock to prevent any changes to the control settings during this function call
+	ctrl_knobs_audio_proc_lock = 1;
+
 	static float left_input_sample = 0.0;
 	static float left_output_sample = 0.0;
 
@@ -151,27 +236,27 @@ void process_audio_data()
 		 * Left Channel
 		 */
 		// Convert int16_t to floats for processing
-		left_input_sample = (float) audio_in_buff_ptr[i];
+		left_input_sample = INT16_TO_FLOAT * ((float) audio_in_buff_ptr[i]);
 		// Apply our processing onto our input sample to generate our output sample
-//		left_output_sample = 0.5f * left_input_sample;
-		left_output_sample = PeakingFilter_Update(&filter_1, left_input_sample);
+		left_output_sample = output_volume_level * PeakingFilter_Update_Cascade(peaking_filters, (size_t) NUM_FREQ_BANDS, left_input_sample);
 		// Fill our DAC output buffer
-		audio_out_buff_ptr[i] = (int16_t) left_output_sample;
+		audio_out_buff_ptr[i] = (int16_t) (FLOAT_TO_INT16 * left_output_sample);
 
 		/*
 		 * Right Channel
 		 */
 		// Convert int16_t to floats for processing
-		right_input_sample = (float) audio_in_buff_ptr[i+1];
+		right_input_sample = INT16_TO_FLOAT * ((float) audio_in_buff_ptr[i+1]);
 		// Apply our processing onto our input sample to generate our output sample
-//		right_output_sample = 0.5f * right_input_sample;
-		right_output_sample = PeakingFilter_Update(&filter_1, right_input_sample);
+		right_output_sample = output_volume_level * PeakingFilter_Update_Cascade(peaking_filters, (size_t) NUM_FREQ_BANDS, right_input_sample);
 		// Fill our DAC output buffer
-		audio_out_buff_ptr[i+1] = (int16_t) right_output_sample;
+		audio_out_buff_ptr[i+1] = (int16_t) (FLOAT_TO_INT16 * right_output_sample);
 	}
 
-	// Reset our buffer ready flag since we completed a processing call
-	audio_buff_rdy_flg = 0;
+	// Reset our control knob lock since we completed processing
+	ctrl_knobs_audio_proc_lock = 0;
+	// Reset audio_buff_samples_rdy to indicate we need a new batch of audio samples from I2S
+	audio_buff_samples_rdy = 0;
 }
 /* USER CODE END 0 */
 
@@ -213,7 +298,7 @@ int main(void)
   // Calibrate ADC 1
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET, ADC_SINGLE_ENDED);
   // Start ADC 1 with DMA to read in our control knobs
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *) control_knobs_buff, NUM_CONTROL_KNOBS);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *) ctrl_knobs_settings_raw, NUM_CTRL_KNOBS);
   // Start timer 2 for clocking ADC 1
   HAL_TIM_Base_Start(&htim2);
 
@@ -221,12 +306,9 @@ int main(void)
   // Initialize our codec
   CS4272_Init(&codec, &hi2c1);
   // Initialize our Peaking Filters
-  PeakingFilter_Init(&filter_1, AUDIO_SAMPLE_RATE_HZ);
-//  PeakingFilter_Init(&filter_2, AUDIO_SAMPLE_RATE_HZ);
-//  PeakingFilter_Init(&filter_3, AUDIO_SAMPLE_RATE_HZ);
-//  PeakingFilter_Init(&filter_4, AUDIO_SAMPLE_RATE_HZ);
-//  PeakingFilter_Init(&filter_5, AUDIO_SAMPLE_RATE_HZ);
-//  PeakingFilter_Init(&filter_6, AUDIO_SAMPLE_RATE_HZ);
+  PeakingFilters_Init(peaking_filters, (size_t) NUM_FREQ_BANDS, AUDIO_SAMPLE_RATE_HZ);
+  // Initialize our EMA Low Pass Filters
+  EMAFilters_Init(ema_filters, (size_t) NUM_CTRL_KNOBS, CTRL_KNOBS_EMA_ALPHA);
 
 
   // Initialize our I2S data stream
@@ -242,25 +324,27 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if (audio_buff_rdy_flg)
+	  if (audio_buff_samples_rdy)
 	  {
-		  // Buffers are initialized with data
-		  // We can process the data now
-		  process_audio_data();
+		  // Buffers are initialized with audio data, we can process the data now
+		  processAudioData();
 	  }
 
-//	  for (size_t i=0; i<NUM_CONTROL_KNOBS; ++i)
+	  if (ctrl_knobs_adc_samples_rdy)
+	  {
+		  // Buffers are initialized with control knob data, we can process the data now
+		  processControlKnobs();
+	  }
+
+
+//	  for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
 //	  {
-//		  if (i == 0)
+//		  if (i == NUM_CTRL_KNOBS-1)
 //		  {
-//			  sprintf(uart_buff, "Control Knob %i Voltage: %lf \r\n", i+1, control_knobs_buff_voltage[i]);
+//			  sprintf(uart_buff, "Control Knob %i Normalized Value: %lf \r\n", i+1, ctrl_knobs_settings[i]);
 //			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
 //		  }
-////		  sprintf(uart_buff, "Control Knob %i Voltage: %lf \r\n", i+1, control_knobs_buff_voltage[i]);
-////		  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
 //	  }
-
-	  HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -351,7 +435,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.EOCSelection = ADC_EOC_SEQ_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 6;
+  hadc1.Init.NbrOfConversion = 8;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T2_TRGO;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
@@ -374,7 +458,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_3;
+  sConfig.Channel = ADC_CHANNEL_19;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_387CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
@@ -388,7 +472,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_7;
+  sConfig.Channel = ADC_CHANNEL_3;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -397,7 +481,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_4;
+  sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -406,7 +490,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_4;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -415,7 +499,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_9;
+  sConfig.Channel = ADC_CHANNEL_8;
   sConfig.Rank = ADC_REGULAR_RANK_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -424,8 +508,26 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Channel = ADC_CHANNEL_9;
   sConfig.Rank = ADC_REGULAR_RANK_6;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Rank = ADC_REGULAR_RANK_7;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_18;
+  sConfig.Rank = ADC_REGULAR_RANK_8;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
