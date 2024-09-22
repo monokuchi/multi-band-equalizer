@@ -53,13 +53,13 @@ void PeakingFilter_Set_Coefficients(PeakingFilter *filter, PeakingFilterParamete
 	/*
 	 * Compute our filter coefficients
 	 */
-	filter->a[0] = 4.0f + (2.0f * (filter_params->gain_linear / Q) * wc_T) + (wc_T * wc_T);
-	filter->a[1] = (2.0f * (wc_T * wc_T)) - 8.0f;
-	filter->a[2] = 4.0f - (2.0f * (filter_params->gain_linear / Q) * wc_T) + (wc_T * wc_T);
+	filter->b[0] = 4.0f + (2.0f * (filter_params->gain_linear / Q) * wc_T) + (wc_T * wc_T);
+	filter->b[1] = (2.0f * (wc_T * wc_T)) - 8.0f;
+	filter->b[2] = 4.0f - (2.0f * (filter_params->gain_linear / Q) * wc_T) + (wc_T * wc_T);
 
-	filter->b[0] = 1.0f / (4.0f + ((2.0f / filter_params->gain_linear) * wc_T) + (wc_T * wc_T)); // NOTE: This is the reciprocal of the coefficient (saves one extra division in the update step)
-	filter->b[1] = -((2.0f * (wc_T * wc_T)) - 8.0f);
-	filter->b[2] = -(4.0f - ((2.0f / filter_params->gain_linear) * wc_T) + (wc_T * wc_T));
+	filter->a[0] = 1.0f / (4.0f + ((2.0f / Q) * wc_T) + (wc_T * wc_T)); // NOTE: This is the reciprocal of the coefficient (saves one extra division in the update step)
+	filter->a[1] = (2.0f * (wc_T * wc_T)) - 8.0f;
+	filter->a[2] = 4.0f - ((2.0f / Q) * wc_T) + (wc_T * wc_T);
 }
 
 float PeakingFilter_Update(PeakingFilter *filter, float input_sample)
@@ -67,8 +67,8 @@ float PeakingFilter_Update(PeakingFilter *filter, float input_sample)
 	/*
 	 * Compute the output sample
 	 */
-	float output_sample = filter->b[0] * ((filter->a[0]*input_sample) + (filter->a[1]*filter->x[1]) + (filter->a[2]*filter->x[2]) +
-									      (filter->b[1]*filter->y[1]) + (filter->b[2]*filter->y[2]));
+	float output_sample = filter->a[0] * ((filter->b[0]*input_sample) + (filter->b[1]*filter->x[1]) + (filter->b[2]*filter->x[2])
+									     -(filter->a[1]*filter->y[1]) - (filter->a[2]*filter->y[2]));
 
 
 	/*

@@ -34,3 +34,8 @@ fp-info-cache
 [Dd]ebug
 .launch
 
+
+
+#### Python ####
+__pycache__
+venv/

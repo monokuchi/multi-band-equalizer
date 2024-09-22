@@ -44,8 +44,8 @@ typedef struct
 
 	/*
 	 * Filter coefficients
-	 * a -> x[n] coefficients
-	 * b -> y[n] coefficients
+	 * a -> y[n] coefficients
+	 * b -> x[n] coefficients
 	 */
 	float a[3];
 	float b[3];
