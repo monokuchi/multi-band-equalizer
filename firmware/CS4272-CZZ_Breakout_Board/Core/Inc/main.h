@@ -57,6 +57,44 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define MCO_Pin GPIO_PIN_0
+#define MCO_GPIO_Port GPIOH
+#define CTRL_KNB_VOL_LVL_Pin GPIO_PIN_4
+#define CTRL_KNB_VOL_LVL_GPIO_Port GPIOA
+#define CTRL_KNB_100_HZ_Pin GPIO_PIN_5
+#define CTRL_KNB_100_HZ_GPIO_Port GPIOA
+#define CTRL_KNB_200_HZ_Pin GPIO_PIN_6
+#define CTRL_KNB_200_HZ_GPIO_Port GPIOA
+#define CTRL_KNB_400_HZ_Pin GPIO_PIN_7
+#define CTRL_KNB_400_HZ_GPIO_Port GPIOA
+#define CTRL_KNB_800_HZ_Pin GPIO_PIN_4
+#define CTRL_KNB_800_HZ_GPIO_Port GPIOC
+#define CTRL_KNB_1600_HZ_Pin GPIO_PIN_5
+#define CTRL_KNB_1600_HZ_GPIO_Port GPIOC
+#define CTRL_KNB_3200_HZ_Pin GPIO_PIN_0
+#define CTRL_KNB_3200_HZ_GPIO_Port GPIOB
+#define CTRL_KNB_6400_HZ_Pin GPIO_PIN_1
+#define CTRL_KNB_6400_HZ_GPIO_Port GPIOB
+#define STLK_VCP_RX_Pin GPIO_PIN_8
+#define STLK_VCP_RX_GPIO_Port GPIOD
+#define STLK_VCP_TX_Pin GPIO_PIN_9
+#define STLK_VCP_TX_GPIO_Port GPIOD
+#define SWDIO_Pin GPIO_PIN_13
+#define SWDIO_GPIO_Port GPIOA
+#define SWCLK_Pin GPIO_PIN_14
+#define SWCLK_GPIO_Port GPIOA
+#define CODEC_NRST_Pin GPIO_PIN_11
+#define CODEC_NRST_GPIO_Port GPIOC
+#define I2S1_OUT_Pin GPIO_PIN_7
+#define I2S1_OUT_GPIO_Port GPIOD
+#define I2S1_IN_Pin GPIO_PIN_9
+#define I2S1_IN_GPIO_Port GPIOG
+#define I2S1_LRCK_Pin GPIO_PIN_10
+#define I2S1_LRCK_GPIO_Port GPIOG
+#define I2S1_SCLK_Pin GPIO_PIN_11
+#define I2S1_SCLK_GPIO_Port GPIOG
+#define SWO_Pin GPIO_PIN_3
+#define SWO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

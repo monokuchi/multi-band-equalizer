@@ -13,9 +13,10 @@
 /*
  * INCLUDES
  */
+#include "CS4272.h"
+
 #include <string.h>
 
-#include "CS4272.h"
 
 
 

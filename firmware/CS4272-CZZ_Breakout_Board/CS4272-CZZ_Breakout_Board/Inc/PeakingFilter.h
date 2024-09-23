@@ -22,7 +22,7 @@
 /*
  * DEFINES
  */
-#define PEAKING_FILT_PARAMS_ALL_PASS { .center_freq_hz = 1.0f, .bandwidth_hz = 0.0f, .gain_linear = 1.0f };
+#define PEAKING_FILT_PARAMS_ALL_PASS { .center_freq_hz = 1.0f, .bandwidth_hz = 0.000001f, .gain_linear = 1.0f };
 
 
 

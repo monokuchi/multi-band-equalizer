@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 # Define our constants
 f_s = 48000.0 # Sampling Frequency
 T = 1.0 / f_s # Sampling Period
-f_c = 10000.0 # Center Frequency of Peaking Filter
-bw = 1000.0 # Bandwidth of Peaking Filter
-G = 1 # Gain of Peaking Filter (G = 1 -> All Pass, 0 < G < 1 -> Cut, G > 1 -> Boost)
+f_c = 440.0 # Center Frequency of Peaking Filter
+bw = 50.0 # Bandwidth of Peaking Filter
+G = 10.0 # Gain of Peaking Filter (G = 1 -> All Pass, 0 < G < 1 -> Cut, G > 1 -> Boost)
 Q = f_c / bw # Quality Factor of Peaking Filter
 w_ct = 2.0 * np.tan(np.pi * f_c * T) # Substitution term to make coefficient calculation eaiser
 
