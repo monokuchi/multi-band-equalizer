@@ -1,2 +1,2 @@
 # multi-band-equalizer
-Peaking equalizer implemented using a STM32H7
+Multi-band parametric equalizer implemented using a STM32H7
