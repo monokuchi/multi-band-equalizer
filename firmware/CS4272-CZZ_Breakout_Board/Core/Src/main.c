@@ -36,7 +36,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define AUDIO_DATA_BUFFER_SIZE  128
+#define AUDIO_DATA_BUFFER_SIZE  512
 #define AUDIO_SAMPLE_RATE_HZ 	48000.0f
 
 #define NUM_CTRL_KNOBS 		 8 // 7 Frequency Bands, 1 Volume Level
@@ -45,10 +45,12 @@
 #define CTRL_KNOBS_EMA_ALPHA 0.85f // Alpha factor for EMA Low Pass Filter (Lower alpha -> Lower cutoff frequency)
 
 #define MAX_OUTPUT_VOLUME_SCALE 4.0f
+#define MAX_OUTPUT_GAIN_SCALE 2.0f
+#define MAX_OUTPUT_BANDWIDTH_SCALE 1000.0f
 
 #define ADC_RAW_NORMALIZATION_FACTOR 65535 // 2^16 - 1
-#define INT16_TO_FLOAT 				 0.000030517578125f // 1 / 32768
-#define FLOAT_TO_INT16 				 32768.0f // 2^16 / 2
+#define INT32_TO_FLOAT 				 4.6566128752e-10f // 1 / (2^(32-1) - 1)
+#define FLOAT_TO_INT32 				 2.147483647e9f // 2^(32-1) - 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -83,13 +85,12 @@ PeakingFilterParameters peaking_filters_params[NUM_FREQ_BANDS];
 EMAFilter ema_filters[NUM_CTRL_KNOBS];
 
 // Ping Pong buffers for our codec's ADC and DAC
-volatile int16_t audio_adc_buff[AUDIO_DATA_BUFFER_SIZE];
-volatile int16_t audio_dac_buff[AUDIO_DATA_BUFFER_SIZE];
+volatile int32_t audio_adc_buff[AUDIO_DATA_BUFFER_SIZE];
+volatile int32_t audio_dac_buff[AUDIO_DATA_BUFFER_SIZE];
 // Access pointers to our audio data buffers
-static volatile int16_t *audio_in_buff_ptr = &audio_adc_buff[0];
-static volatile int16_t *audio_out_buff_ptr = &audio_dac_buff[0];
-// Flag to indicate that our current in buffer has filled up and is ready to be switched
-// with the out buffer
+static volatile int32_t *audio_in_buff_ptr = &audio_adc_buff[0];
+static volatile int32_t *audio_out_buff_ptr = &audio_dac_buff[0];
+// Flag to indicate that our current in buffer has filled up and is ready to be switched with the out buffer
 volatile uint8_t audio_buff_samples_rdy = 0;
 
 // Buffer to hold our raw sampled control knob signals
@@ -169,12 +170,12 @@ void processControlKnobs()
 					if (!mode_select)
 					{
 						// Update the filter gain
-						peaking_filters_params[i].gain_linear = 10.0f * ctrl_knobs_settings[i];
+						peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE * ctrl_knobs_settings[i];
 					}
 					else
 					{
 						// Update the filter bandwidth
-						peaking_filters_params[i].bandwidth_hz = (1000.0f * ctrl_knobs_settings[i]) + 1.0f;
+						peaking_filters_params[i].bandwidth_hz = (MAX_OUTPUT_BANDWIDTH_SCALE * ctrl_knobs_settings[i]) + 1.0f;
 						if (peaking_filters_params[i].bandwidth_hz > peaking_filters_params[i].center_freq_hz)
 						{
 							// Since the center frequencies are not evenly spaced out we also need to make the bandwidth skewed
@@ -239,22 +240,25 @@ void processAudioData()
 		/*
 		 * Left Channel
 		 */
-		// Convert int16_t to floats for processing
-		left_input_sample = INT16_TO_FLOAT * ((float) audio_in_buff_ptr[i]);
+		// Convert int32_t to floats for processing
+		left_input_sample = INT32_TO_FLOAT * ((float) audio_in_buff_ptr[i]);
 		// Apply our processing onto our input sample to generate our output sample
 		left_output_sample = output_volume_level * PeakingFilter_Update_Cascade(peaking_filters, (size_t) NUM_FREQ_BANDS, left_input_sample);
+//		left_output_sample = output_volume_level * left_input_sample;
 		// Fill our DAC output buffer
-		audio_out_buff_ptr[i] = (int16_t) (FLOAT_TO_INT16 * left_output_sample);
+		audio_out_buff_ptr[i] = (int32_t) (FLOAT_TO_INT32 * left_output_sample);
+
 
 		/*
 		 * Right Channel
 		 */
-		// Convert int16_t to floats for processing
-		right_input_sample = INT16_TO_FLOAT * ((float) audio_in_buff_ptr[i+1]);
+		// Convert int32_t to floats for processing
+		right_input_sample = INT32_TO_FLOAT * ((float) audio_in_buff_ptr[i+1]);
 		// Apply our processing onto our input sample to generate our output sample
 		right_output_sample = output_volume_level * PeakingFilter_Update_Cascade(peaking_filters, (size_t) NUM_FREQ_BANDS, right_input_sample);
+//		right_output_sample = output_volume_level * right_input_sample;
 		// Fill our DAC output buffer
-		audio_out_buff_ptr[i+1] = (int16_t) (FLOAT_TO_INT16 * right_output_sample);
+		audio_out_buff_ptr[i+1] = (int32_t) (FLOAT_TO_INT32 * right_output_sample);
 	}
 
 	// Reset our control knob lock since we completed processing
@@ -316,7 +320,7 @@ int main(void)
 
 
   // Initialize our I2S data stream
-  HAL_StatusTypeDef status = HAL_I2SEx_TransmitReceive_DMA(&hi2s1, (uint16_t *) audio_dac_buff, (uint16_t *) audio_adc_buff, AUDIO_DATA_BUFFER_SIZE);
+  HAL_I2SEx_TransmitReceive_DMA(&hi2s1, (uint16_t *) audio_dac_buff, (uint16_t *) audio_adc_buff, AUDIO_DATA_BUFFER_SIZE);
 
 
   /* USER CODE END 2 */
@@ -341,14 +345,14 @@ int main(void)
 	  }
 
 
-//	  for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
-//	  {
-//		  if (i == 2)
-//		  {
-//			  sprintf(uart_buff, "Control Knob %i Normalized Value: %lf \r\n", i+1, ctrl_knobs_settings[i]);
-//			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
-//		  }
-//	  }
+	  for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
+	  {
+		  if (i == 2)
+		  {
+			  sprintf(uart_buff, "Control Knob %i Normalized Value: %lf \r\n", i+1, ctrl_knobs_settings[i]);
+			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
+		  }
+	  }
 
   }
   /* USER CODE END 3 */
@@ -448,6 +452,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc1.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;
   hadc1.Init.OversamplingMode = DISABLE;
+  hadc1.Init.Oversampling.Ratio = 1;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
     Error_Handler();
@@ -609,13 +614,13 @@ static void MX_I2S1_Init(void)
   hi2s1.Instance = SPI1;
   hi2s1.Init.Mode = I2S_MODE_SLAVE_FULLDUPLEX;
   hi2s1.Init.Standard = I2S_STANDARD_PHILIPS;
-  hi2s1.Init.DataFormat = I2S_DATAFORMAT_16B;
+  hi2s1.Init.DataFormat = I2S_DATAFORMAT_24B;
   hi2s1.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
   hi2s1.Init.AudioFreq = I2S_AUDIOFREQ_48K;
   hi2s1.Init.CPOL = I2S_CPOL_LOW;
   hi2s1.Init.FirstBit = I2S_FIRSTBIT_MSB;
   hi2s1.Init.WSInversion = I2S_WS_INVERSION_DISABLE;
-  hi2s1.Init.Data24BitAlignment = I2S_DATA_24BIT_ALIGNMENT_RIGHT;
+  hi2s1.Init.Data24BitAlignment = I2S_DATA_24BIT_ALIGNMENT_LEFT;
   hi2s1.Init.MasterKeepIOState = I2S_MASTER_KEEP_IO_STATE_DISABLE;
   if (HAL_I2S_Init(&hi2s1) != HAL_OK)
   {

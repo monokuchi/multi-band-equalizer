@@ -65,24 +65,23 @@ void PeakingFilter_Set_Coefficients(PeakingFilter *filter, PeakingFilterParamete
 float PeakingFilter_Update(PeakingFilter *filter, float input_sample)
 {
 	/*
-	 * Compute the output sample
+	 * Shift the filter inputs and outputs
 	 */
-	float output_sample = filter->a[0] * ((filter->b[0]*input_sample) + (filter->b[1]*filter->x[1]) + (filter->b[2]*filter->x[2])
-									     -(filter->a[1]*filter->y[1]) - (filter->a[2]*filter->y[2]));
+	filter->x[2] = filter->x[1];
+	filter->x[1] = filter->x[0];
+	filter->x[0] = input_sample;
+
+	filter->y[2] = filter->y[1];
+	filter->y[1] = filter->y[0];
 
 
 	/*
-	 * Update the filter inputs and outputs
+	 * Compute the output sample
 	 */
-	filter->x[0] = input_sample;
-	filter->x[1] = filter->x[0];
-	filter->x[2] = filter->x[1];
+	filter->y[0] = filter->a[0] * ((filter->b[0]*filter->x[0]) + (filter->b[1]*filter->x[1]) + (filter->b[2]*filter->x[2])
+								  -(filter->a[1]*filter->y[1]) - (filter->a[2]*filter->y[2]));
 
-	filter->y[0] = output_sample;
-	filter->y[1] = filter->y[0];
-	filter->y[2] = filter->y[1];
-
-	return output_sample;
+	return filter->y[0];
 }
 
 float PeakingFilter_Update_Cascade(PeakingFilter *filters, size_t filters_size, float input_sample)
