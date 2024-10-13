@@ -16,13 +16,14 @@
 #include <stdint.h>
 
 #include "math.h"
+#include "CMSIS_Biquad_IIR_DirectForm1.h"
 
 
 
 /*
  * DEFINES
  */
-#define PEAKING_FILT_PARAMS_ALL_PASS { .center_freq_hz = 1.0f, .bandwidth_hz = 1.0f, .gain_linear = 1.0f };
+#define PEAKING_FILT_PARAMS_ALL_PASS { .center_freq_hz = 1.0f, .bandwidth_hz = 1.0f, .gain_linear = 1.0f }
 
 
 
@@ -78,6 +79,15 @@ void PeakingFilter_Set_Coefficients(PeakingFilter *filter, PeakingFilterParamete
 float PeakingFilter_Update(PeakingFilter *filter, float input_sample);
 
 float PeakingFilter_Update_Cascade(PeakingFilter *filters, size_t filters_size, float input_sample);
+
+
+
+void PeakingFilter_Init_CMSIS(IIR_Direct_Form_1 *iir_filter, float sample_rate_hz);
+
+void PeakingFilter_Set_Coefficients_CMSIS(IIR_Direct_Form_1 *iir_filter, PeakingFilterParameters *filter_params, size_t filters_size);
+
+void PeakingFilter_Update_CMSIS(IIR_Direct_Form_1 *iir_filter, float *input_samples, float *output_samples, size_t samples_block_size);
+
 
 
 

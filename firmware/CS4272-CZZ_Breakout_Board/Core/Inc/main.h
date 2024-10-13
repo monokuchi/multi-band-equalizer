@@ -85,6 +85,8 @@ void Error_Handler(void);
 #define SWCLK_GPIO_Port GPIOA
 #define CODEC_NRST_Pin GPIO_PIN_11
 #define CODEC_NRST_GPIO_Port GPIOC
+#define GPIO_STATUS_Pin GPIO_PIN_1
+#define GPIO_STATUS_GPIO_Port GPIOD
 #define I2S1_OUT_Pin GPIO_PIN_7
 #define I2S1_OUT_GPIO_Port GPIOD
 #define I2S1_IN_Pin GPIO_PIN_9

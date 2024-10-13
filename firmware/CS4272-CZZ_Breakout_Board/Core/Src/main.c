@@ -36,7 +36,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define AUDIO_DATA_BUFFER_SIZE  512
+#define AUDIO_DATA_BUFFER_SIZE  128
 #define AUDIO_SAMPLE_RATE_HZ 	48000.0f
 
 #define NUM_CTRL_KNOBS 		 8 // 7 Frequency Bands, 1 Volume Level
@@ -45,7 +45,7 @@
 #define CTRL_KNOBS_EMA_ALPHA 0.85f // Alpha factor for EMA Low Pass Filter (Lower alpha -> Lower cutoff frequency)
 
 #define MAX_OUTPUT_VOLUME_SCALE 4.0f
-#define MAX_OUTPUT_GAIN_SCALE 2.0f
+#define MAX_OUTPUT_GAIN_SCALE 5.0f
 #define MAX_OUTPUT_BANDWIDTH_SCALE 1000.0f
 
 #define ADC_RAW_NORMALIZATION_FACTOR 65535 // 2^16 - 1
@@ -76,20 +76,38 @@ UART_HandleTypeDef huart3;
 // CS4272 Codec
 CS4272 codec;
 
-// Array to hold our peaking filters
-PeakingFilter peaking_filters[NUM_FREQ_BANDS];
+// CMSIS IIR Filters for Stereo Channel
+IIR_Direct_Form_1 left_iir_filter;
+IIR_Direct_Form_1 right_iir_filter;
+
 // Struct to hold our filter parameters that can be changed by the control knobs
 PeakingFilterParameters peaking_filters_params[NUM_FREQ_BANDS];
 
 // EMA Low Pass Filters for the Control Knobs
 EMAFilter ema_filters[NUM_CTRL_KNOBS];
 
+// Pre-defined fixed center frequencies for our peaking filters
+static const float peaking_filter_center_freqs[NUM_FREQ_BANDS] = {
+		100.0f,
+		200.0f,
+		400.0f,
+		800.0f,
+		1600.0f,
+		3200.0f,
+		6400.0f
+};
+
 // Ping Pong buffers for our codec's ADC and DAC
-volatile int32_t audio_adc_buff[AUDIO_DATA_BUFFER_SIZE];
-volatile int32_t audio_dac_buff[AUDIO_DATA_BUFFER_SIZE];
+volatile int32_t audio_adc_buff[AUDIO_DATA_BUFFER_SIZE] = {0};
+volatile int32_t audio_dac_buff[AUDIO_DATA_BUFFER_SIZE] = {0};
 // Access pointers to our audio data buffers
 static volatile int32_t *audio_in_buff_ptr = &audio_adc_buff[0];
 static volatile int32_t *audio_out_buff_ptr = &audio_dac_buff[0];
+// Stereo buffers for IIR filters
+static float left_input_buffer[AUDIO_DATA_BUFFER_SIZE/4] = {0};
+static float left_output_buffer[AUDIO_DATA_BUFFER_SIZE/4] = {0};
+static float right_input_buffer[AUDIO_DATA_BUFFER_SIZE/4] = {0};
+static float right_output_buffer[AUDIO_DATA_BUFFER_SIZE/4] = {0};
 // Flag to indicate that our current in buffer has filled up and is ready to be switched with the out buffer
 volatile uint8_t audio_buff_samples_rdy = 0;
 
@@ -160,42 +178,50 @@ void processControlKnobs()
 
 			if (i != NUM_CTRL_KNOBS-1)
 			{
-				if (fabs(ctrl_knobs_settings[i]-prev_ctrl_knobs_settings[i]) > CTRL_KNOBS_DEADBAND)
+				if (fabs(ctrl_knobs_settings[i]-prev_ctrl_knobs_settings[i]) > CTRL_KNOBS_DEADBAND || 1)
 				{
 					// If we are past the deadband then update our filter_params
 
 					// Center Frequencies are fixed and go from [100, 6400] Hz
-					peaking_filters_params[i].center_freq_hz = 100.0f * powf(2.0f, (float) i);
-
-					if (!mode_select)
+					if (peaking_filters_params[i].center_freq_hz != peaking_filter_center_freqs[i])
 					{
-						// Update the filter gain
-						peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE * ctrl_knobs_settings[i];
+						peaking_filters_params[i].center_freq_hz = peaking_filter_center_freqs[i];
+					}
+
+					// Update the filter gain
+//					peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE * ctrl_knobs_settings[i];
+					if (i == 2)
+					{
+						peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE;
 					}
 					else
 					{
-						// Update the filter bandwidth
-						peaking_filters_params[i].bandwidth_hz = (MAX_OUTPUT_BANDWIDTH_SCALE * ctrl_knobs_settings[i]) + 1.0f;
-						if (peaking_filters_params[i].bandwidth_hz > peaking_filters_params[i].center_freq_hz)
-						{
-							// Since the center frequencies are not evenly spaced out we also need to make the bandwidth skewed
-							peaking_filters_params[i].bandwidth_hz = peaking_filters_params[i].center_freq_hz;
-						}
+						peaking_filters_params[i].gain_linear = 1.0f;
 					}
 
-					// Update our filter with our new parameters
-					PeakingFilter_Set_Coefficients(&peaking_filters[i], &peaking_filters_params[i]);
+					// Update the filter bandwidth
+//					peaking_filters_params[i].bandwidth_hz = (MAX_OUTPUT_BANDWIDTH_SCALE * ctrl_knobs_settings[i]) + 1.0f;
+//					if (peaking_filters_params[i].bandwidth_hz > peaking_filters_params[i].center_freq_hz)
+//					{
+//						// Since the center frequencies are not evenly spaced out we also need to make the bandwidth skewed
+//						peaking_filters_params[i].bandwidth_hz = peaking_filters_params[i].center_freq_hz;
+//					}
+					peaking_filters_params[i].bandwidth_hz = 50.0f;
 				}
 			}
 			else
 			{
 				// Set output_level
-				output_volume_level = MAX_OUTPUT_VOLUME_SCALE * ctrl_knobs_settings[i];
+//				output_volume_level = MAX_OUTPUT_VOLUME_SCALE * ctrl_knobs_settings[i];
+				output_volume_level = 1.0f;
 			}
 
 			// Update the prev_ctrl_knobs_settings
 			prev_ctrl_knobs_settings[i] = ctrl_knobs_settings[i];
 		}
+		// Update our IIR filters with our new parameters
+		PeakingFilter_Set_Coefficients_CMSIS(&left_iir_filter, peaking_filters_params, NUM_FREQ_BANDS);
+		PeakingFilter_Set_Coefficients_CMSIS(&right_iir_filter, peaking_filters_params, NUM_FREQ_BANDS);
 	}
 
 	// Reset ctrl_knobs_adc_lock
@@ -229,36 +255,23 @@ void processAudioData()
 	// Set our control knob lock to prevent any changes to the control settings during this function call
 	ctrl_knobs_audio_proc_lock = 1;
 
-	static float left_input_sample = 0.0;
-	static float left_output_sample = 0.0;
 
-	static float right_input_sample = 0.0;
-	static float right_output_sample = 0.0;
-
-	for (size_t i=0; i<(size_t) ((AUDIO_DATA_BUFFER_SIZE/2)-1); i+=2)
+	for (size_t i=0; i<(AUDIO_DATA_BUFFER_SIZE/4); ++i)
 	{
-		/*
-		 * Left Channel
-		 */
-		// Convert int32_t to floats for processing
-		left_input_sample = INT32_TO_FLOAT * ((float) audio_in_buff_ptr[i]);
-		// Apply our processing onto our input sample to generate our output sample
-		left_output_sample = output_volume_level * PeakingFilter_Update_Cascade(peaking_filters, (size_t) NUM_FREQ_BANDS, left_input_sample);
-//		left_output_sample = output_volume_level * left_input_sample;
-		// Fill our DAC output buffer
-		audio_out_buff_ptr[i] = (int32_t) (FLOAT_TO_INT32 * left_output_sample);
+		// Fill in our input buffers and convert int32_t to floats for processing
+		left_input_buffer[i] = INT32_TO_FLOAT * ((float) audio_in_buff_ptr[2*i]);
+		right_input_buffer[i] = INT32_TO_FLOAT * ((float) audio_in_buff_ptr[(2*i)+1]);
+	}
 
+	PeakingFilter_Update_CMSIS(&left_iir_filter, left_input_buffer, left_output_buffer, AUDIO_DATA_BUFFER_SIZE/4);
+	PeakingFilter_Update_CMSIS(&right_iir_filter, right_input_buffer, right_output_buffer, AUDIO_DATA_BUFFER_SIZE/4);
 
-		/*
-		 * Right Channel
-		 */
-		// Convert int32_t to floats for processing
-		right_input_sample = INT32_TO_FLOAT * ((float) audio_in_buff_ptr[i+1]);
-		// Apply our processing onto our input sample to generate our output sample
-		right_output_sample = output_volume_level * PeakingFilter_Update_Cascade(peaking_filters, (size_t) NUM_FREQ_BANDS, right_input_sample);
-//		right_output_sample = output_volume_level * right_input_sample;
-		// Fill our DAC output buffer
-		audio_out_buff_ptr[i+1] = (int32_t) (FLOAT_TO_INT32 * right_output_sample);
+	const float scaling_factor = FLOAT_TO_INT32 * output_volume_level;
+	for (size_t i=0; i<(AUDIO_DATA_BUFFER_SIZE/4); ++i)
+	{
+		// Fill in our output buffers
+		audio_out_buff_ptr[2*i] = scaling_factor * left_output_buffer[i];
+		audio_out_buff_ptr[(2*i)+1] = scaling_factor * right_output_buffer[i];
 	}
 
 	// Reset our control knob lock since we completed processing
@@ -313,8 +326,9 @@ int main(void)
 
   // Initialize our codec
   CS4272_Init(&codec, &hi2c1);
-  // Initialize our Peaking Filters
-  PeakingFilters_Init(peaking_filters, (size_t) NUM_FREQ_BANDS, AUDIO_SAMPLE_RATE_HZ);
+  // Initialize our IIR Peaking Filters
+  PeakingFilter_Init_CMSIS(&left_iir_filter, AUDIO_SAMPLE_RATE_HZ);
+  PeakingFilter_Init_CMSIS(&right_iir_filter, AUDIO_SAMPLE_RATE_HZ);
   // Initialize our EMA Low Pass Filters
   EMAFilters_Init(ema_filters, (size_t) NUM_CTRL_KNOBS, CTRL_KNOBS_EMA_ALPHA);
 
@@ -335,7 +349,9 @@ int main(void)
 	  if (audio_buff_samples_rdy)
 	  {
 		  // Buffers are initialized with audio data, we can process the data now
+		  HAL_GPIO_WritePin(GPIO_STATUS_GPIO_Port, GPIO_STATUS_Pin, GPIO_PIN_SET);
 		  processAudioData();
+		  HAL_GPIO_WritePin(GPIO_STATUS_GPIO_Port, GPIO_STATUS_Pin, GPIO_PIN_RESET);
 	  }
 
 	  if (ctrl_knobs_adc_samples_rdy)
@@ -345,14 +361,14 @@ int main(void)
 	  }
 
 
-	  for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
-	  {
-		  if (i == 2)
-		  {
-			  sprintf(uart_buff, "Control Knob %i Normalized Value: %lf \r\n", i+1, ctrl_knobs_settings[i]);
-			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
-		  }
-	  }
+//	  for (size_t i=0; i<NUM_CTRL_KNOBS; ++i)
+//	  {
+//		  if (i == 2)
+//		  {
+//			  sprintf(uart_buff, "Control Knob %i Normalized Value: %lf \r\n", i+1, ctrl_knobs_settings[i]);
+//			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
+//		  }
+//	  }
 
   }
   /* USER CODE END 3 */
@@ -782,12 +798,22 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(CODEC_NRST_GPIO_Port, CODEC_NRST_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIO_STATUS_GPIO_Port, GPIO_STATUS_Pin, GPIO_PIN_RESET);
+
   /*Configure GPIO pin : CODEC_NRST_Pin */
   GPIO_InitStruct.Pin = CODEC_NRST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(CODEC_NRST_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : GPIO_STATUS_Pin */
+  GPIO_InitStruct.Pin = GPIO_STATUS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(GPIO_STATUS_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

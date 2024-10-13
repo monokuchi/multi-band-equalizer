@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 
 
 # Define our constants
-f_s = 48000.0 # Sampling Frequency
-T = 1.0 / f_s # Sampling Period
-f_c = 440.0 # Center Frequency of Peaking Filter
-bw = 50.0 # Bandwidth of Peaking Filter
-G = 10.0 # Gain of Peaking Filter (G = 1 -> All Pass, 0 < G < 1 -> Cut, G > 1 -> Boost)
+f_s = 48000.0 # Sampling Frequency [Hz]
+T = 1.0 / f_s # Sampling Period [Sec]
+f_c = 800.0 # Center Frequency of Peaking Filter [Hz]
+bw = 50.0 # Bandwidth of Peaking Filter [Hz]
+G = 5.0 # Gain of Peaking Filter (G = 1 -> All Pass, 0 < G < 1 -> Cut, G > 1 -> Boost)
 Q = f_c / bw # Quality Factor of Peaking Filter
 w_ct = 2.0 * np.tan(np.pi * f_c * T) # Substitution term to make coefficient calculation eaiser
 
@@ -31,7 +31,7 @@ np.set_printoptions(legacy='1.25') # For prettier printing
 print("a:", a)
 print("b:", b)
 
-w, h = signal.freqz(b, a) # Calculate filter points based on the coefficients
+w, h = signal.freqz(b, a, worN=2**16, fs=f_s) # Calculate filter points based on the coefficients
 
 
 # Plot the digital filter
@@ -42,7 +42,7 @@ if G == 1.0: # Stop autoscaling for the All Pass case since the magnitude respon
     ax1.autoscale(False) 
 ax1.plot(w, 20 * np.log10(abs(h)), "b")
 ax1.set_ylabel("Amplitude [dB]", color="b")
-ax1.set_xlabel("Frequency [rad/sample]")
+ax1.set_xlabel("Frequency [Hz]")
 
 ax2 = ax1.twinx()
 angles = np.unwrap(np.angle(h))
