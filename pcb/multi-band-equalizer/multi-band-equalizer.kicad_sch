@@ -1003,6 +1003,108 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Audio:AudioJack2"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8666,16 +8768,6 @@
 	)
 	(wire
 		(pts
-			(xy 406.4 182.88) (xy 408.94 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3416d237-a0d6-4dc5-a6f4-99ea6ab86836")
-	)
-	(wire
-		(pts
 			(xy 438.15 55.88) (xy 438.15 57.15)
 		)
 		(stroke
@@ -9806,16 +9898,6 @@
 	)
 	(wire
 		(pts
-			(xy 388.62 180.34) (xy 408.94 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "71f9acb0-be8d-4cb0-a535-5d05cd91ba8e")
-	)
-	(wire
-		(pts
 			(xy 288.29 347.98) (xy 316.23 347.98)
 		)
 		(stroke
@@ -10076,6 +10158,16 @@
 	)
 	(wire
 		(pts
+			(xy 408.94 180.34) (xy 389.89 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dd50ddf-0ffe-4995-b93d-f7a5629a9642")
+	)
+	(wire
+		(pts
 			(xy 214.63 340.36) (xy 201.93 340.36)
 		)
 		(stroke
@@ -10203,6 +10295,16 @@
 			(type default)
 		)
 		(uuid "852fa575-db79-4adb-b5be-9190ecd8aa44")
+	)
+	(wire
+		(pts
+			(xy 408.94 182.88) (xy 389.89 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85c781fc-d232-4440-984a-521d3c78541a")
 	)
 	(wire
 		(pts
@@ -10753,16 +10855,6 @@
 			(type default)
 		)
 		(uuid "a1fa9657-48aa-43d0-a573-5fa6b60beb65")
-	)
-	(wire
-		(pts
-			(xy 388.62 182.88) (xy 398.78 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a233bfd2-74bf-41fd-a01f-5f64b2a59111")
 	)
 	(wire
 		(pts
@@ -12668,16 +12760,6 @@
 		)
 		(uuid "48a1b09c-2f65-469d-970e-073a31b2f760")
 	)
-	(text "External Resistor for Crystal\nNeed to calculate for specific crystal"
-		(exclude_from_sim no)
-		(at 381 186.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "498d89bb-a044-4134-8931-fd2cf172dc0e")
-	)
 	(text "Upper 6 bits of the 7 bit address field is always 001000. \nSince we pulled AD0 to VA the chip address will be 0010001\n(Pg 36)"
 		(exclude_from_sim no)
 		(at 78.486 268.986 0)
@@ -13208,7 +13290,7 @@
 		(uuid "37675bf0-c688-4cee-a098-7ba6c79ac9f4")
 	)
 	(label "MCU_XTO"
-		(at 388.62 182.88 0)
+		(at 389.89 182.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13501,7 +13583,7 @@
 		(uuid "8ca79254-65f7-4a05-a2de-f2f7d09b7a2e")
 	)
 	(label "MCU_XTI"
-		(at 388.62 180.34 0)
+		(at 389.89 180.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18476,73 +18558,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 402.59 182.88 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6a04d953-2ea0-4e27-a86e-a888310a0060")
-		(property "Reference" "R6"
-			(at 402.59 185.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 402.59 187.96 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 402.59 184.658 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 402.59 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 402.59 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9811c9db-7a5f-46c6-ba29-e58aab78464c")
-		)
-		(pin "1"
-			(uuid "2705f14c-f5c1-42c0-b327-fc480ed07293")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 124.46 213.36 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21524,7 +21539,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "50 MHz"
+		(property "Value" "24 MHz"
 			(at 574.04 353.0599 90)
 			(effects
 				(font
@@ -24034,6 +24049,73 @@
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 595.63 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb13f644-a239-42df-950e-9034f573644a")
+		(property "Reference" "TP1"
+			(at 598.17 173.2279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 598.17 175.7679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
+			(at 600.71 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 600.71 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 595.63 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9071340-5f04-439f-b326-1704a16a13c0")
+		)
+		(instances
+			(project ""
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
