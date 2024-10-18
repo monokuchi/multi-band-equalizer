@@ -81,8 +81,8 @@ void Error_Handler(void);
 #define I2S2_SCLK_GPIO_Port GPIOB
 #define I2S2_MCLK_Pin GPIO_PIN_6
 #define I2S2_MCLK_GPIO_Port GPIOC
-#define CODEC_NRST_Pin GPIO_PIN_12
-#define CODEC_NRST_GPIO_Port GPIOC
+#define CODEC_NRST_Pin GPIO_PIN_10
+#define CODEC_NRST_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
