@@ -70,9 +70,11 @@ typedef struct
  */
 void IIR_Direct_Form_1_Init(IIR_Direct_Form_1 *filter);
 
+void IIR_Direct_Form_1_Set_Coefficients(IIR_Direct_Form_1 *filter);
+
 void IIR_Direct_Form_1_Update(IIR_Direct_Form_1 *filter, float *src, float *dst, size_t block_size);
 
-void IIR_Direct_Form_1_Cascade_Filters(IIR_Direct_Form_1 *filter_1, IIR_Direct_Form_1 *filter_2);
+IIR_Direct_Form_1 IIR_Direct_Form_1_Cascade_Filters(const IIR_Direct_Form_1 *filter_1, const IIR_Direct_Form_1 *filter_2);
 
 
 

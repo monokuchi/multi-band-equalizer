@@ -112,6 +112,11 @@ float PeakingFilter_Update_Cascade(PeakingFilter *filters, size_t filters_size, 
 void PeakingFilter_Init_CMSIS(IIR_Direct_Form_1 *iir_filter, float sample_rate_hz)
 {
 	iir_filter->sample_period_sec = 1.0f / sample_rate_hz;
+
+	// Set default filter coefficients (all-pass filter)
+	PeakingFilterParameters default_filter_params[IIR_DIRECT_FORM_1_NUM_STAGES] = { [0 ... IIR_DIRECT_FORM_1_NUM_STAGES-1] = PEAKING_FILT_PARAMS_ALL_PASS };
+	PeakingFilter_Set_Coefficients_CMSIS(iir_filter, default_filter_params, IIR_DIRECT_FORM_1_NUM_STAGES);
+
 	IIR_Direct_Form_1_Init(iir_filter);
 }
 
@@ -159,8 +164,8 @@ void PeakingFilter_Set_Coefficients_CMSIS(IIR_Direct_Form_1 *iir_filter, Peaking
 		iir_filter->cmsis_coefficients[(IIR_DIRECT_FORM_1_NUM_COEFFICIENTS*i)+4] = -a_2;
 	}
 
-	// Initialize our CMSIS IIR filter with our new cmsis_coefficients
-	IIR_Direct_Form_1_Init(iir_filter);
+	// Update our CMSIS IIR filter with our new cmsis_coefficients
+	IIR_Direct_Form_1_Set_Coefficients(iir_filter);
 }
 
 
