@@ -1,0 +1,3 @@
+[submodule "pcb/multi-band-equalizer/CustomLibraries"]
+	path = pcb/multi-band-equalizer/CustomLibraries
+	url = https://github.com/monokuchi/CustomLibraries.git
