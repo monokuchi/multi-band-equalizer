@@ -1537,7 +1537,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05bad534-8339-4aa3-9d20-8f7dd6bb3450")
-		(property "Reference" "R45"
+		(property "Reference" "R44"
 			(at 198.12 91.4399 0)
 			(effects
 				(font
@@ -1591,11 +1591,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R45")
+					(reference "R44")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R34")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -1611,7 +1611,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08e2c684-99e7-4916-b846-882c5ce71025")
-		(property "Reference" "R41"
+		(property "Reference" "R40"
 			(at 133.35 72.3899 0)
 			(effects
 				(font
@@ -1665,11 +1665,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R41")
+					(reference "R40")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R30")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -1685,7 +1685,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09ef85b4-6be2-4fdb-8933-3a10d02fd730")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR047"
 			(at 130.81 50.8 0)
 			(effects
 				(font
@@ -1735,11 +1735,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR050")
+					(reference "#PWR047")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR040")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -1755,7 +1755,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0bf65985-e23d-4439-ad90-3ffe9f32d9ce")
-		(property "Reference" "R47"
+		(property "Reference" "R46"
 			(at 152.4 115.5699 0)
 			(effects
 				(font
@@ -1809,11 +1809,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R47")
+					(reference "R46")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R36")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -1829,7 +1829,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "103f3993-9822-4e2d-b524-739a10921ddc")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR055"
 			(at 195.58 105.41 0)
 			(effects
 				(font
@@ -1879,11 +1879,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR058")
+					(reference "#PWR055")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR048")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -1899,7 +1899,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c06d629-9520-438f-988c-3cc9c569c879")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR050"
 			(at 158.75 69.85 0)
 			(effects
 				(font
@@ -1949,11 +1949,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR053")
+					(reference "#PWR050")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR043")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -1969,7 +1969,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1cf19c6c-ab6a-4697-a5a5-f8313b75057d")
-		(property "Reference" "R48"
+		(property "Reference" "R47"
 			(at 198.12 130.8099 0)
 			(effects
 				(font
@@ -2023,11 +2023,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R48")
+					(reference "R47")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R37")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -2043,7 +2043,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d7e84a3-c59e-4f8e-aee3-508803666073")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR051"
 			(at 233.68 80.01 0)
 			(effects
 				(font
@@ -2093,11 +2093,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR054")
+					(reference "#PWR051")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR044")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -2113,7 +2113,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e3e8bb3-5237-433f-a754-a29fff3968cd")
-		(property "Reference" "R42"
+		(property "Reference" "R41"
 			(at 55.88 74.93 90)
 			(effects
 				(font
@@ -2165,11 +2165,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R42")
+					(reference "R41")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R31")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -2185,7 +2185,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4229f9fc-417e-4e57-a9ad-0ba00edfd36f")
-		(property "Reference" "R46"
+		(property "Reference" "R45"
 			(at 142.24 115.5699 0)
 			(effects
 				(font
@@ -2239,11 +2239,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R46")
+					(reference "R45")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R35")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -2349,7 +2349,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b2b6fab-9a3c-4f2d-afa4-7702e8deaec4")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR052"
 			(at 66.04 102.87 0)
 			(effects
 				(font
@@ -2399,11 +2399,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR055")
+					(reference "#PWR052")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR045")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -2419,7 +2419,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a3cff99-5680-4913-a747-24c0dced2b45")
-		(property "Reference" "R44"
+		(property "Reference" "R43"
 			(at 107.95 87.6299 0)
 			(effects
 				(font
@@ -2473,11 +2473,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R44")
+					(reference "R43")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R33")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -2493,7 +2493,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7cc9c794-b68d-481c-af16-412658042a9c")
-		(property "Reference" "#PWR059"
+		(property "Reference" "#PWR056"
 			(at 195.58 144.78 0)
 			(effects
 				(font
@@ -2543,11 +2543,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR059")
+					(reference "#PWR056")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR049")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -2563,7 +2563,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "806cb69e-8368-45e1-9b65-f1bbb1fd0195")
-		(property "Reference" "C49"
+		(property "Reference" "C48"
 			(at 119.38 73.66 90)
 			(effects
 				(font
@@ -2615,11 +2615,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "C49")
+					(reference "C48")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "C45")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -2635,7 +2635,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8efdc34d-78ac-420a-bb64-43ec7030dee8")
-		(property "Reference" "R49"
+		(property "Reference" "R48"
 			(at 168.91 130.81 90)
 			(effects
 				(font
@@ -2687,11 +2687,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R49")
+					(reference "R48")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R38")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -2797,7 +2797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ec1a125-6486-46ab-9d3c-f6818e27d2db")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR048"
 			(at 233.68 57.15 0)
 			(effects
 				(font
@@ -2847,11 +2847,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR051")
+					(reference "#PWR048")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR041")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -2867,7 +2867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a956e847-c2ad-4443-8aa5-6cca14e1ced4")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR054"
 			(at 105.41 102.87 0)
 			(effects
 				(font
@@ -2917,11 +2917,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR057")
+					(reference "#PWR054")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR047")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -2937,7 +2937,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab1b6bb7-e9ab-4c5c-8421-ad0d05bbc672")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR049"
 			(at 256.54 63.5 0)
 			(effects
 				(font
@@ -2987,11 +2987,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR052")
+					(reference "#PWR049")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR042")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -3099,7 +3099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1c7754a-c1a3-470d-ace3-58e9ab6fef4e")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR053"
 			(at 85.09 102.87 0)
 			(effects
 				(font
@@ -3149,11 +3149,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR056")
+					(reference "#PWR053")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR046")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -3169,7 +3169,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3083645-e9b6-4386-97a2-d05bf7d78097")
-		(property "Reference" "R43"
+		(property "Reference" "R42"
 			(at 68.58 87.6299 0)
 			(effects
 				(font
@@ -3223,11 +3223,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R43")
+					(reference "R42")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R32")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -3243,7 +3243,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0f21138-ac43-4c0a-b10d-2ecfda6c5b10")
-		(property "Reference" "R40"
+		(property "Reference" "R39"
 			(at 151.13 54.61 90)
 			(effects
 				(font
@@ -3295,11 +3295,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R40")
+					(reference "R39")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R29")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -3314,7 +3314,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d215fd82-4c00-4a82-a961-464d767345ac")
-		(property "Reference" "C51"
+		(property "Reference" "C50"
 			(at 168.91 150.622 90)
 			(effects
 				(font
@@ -3366,11 +3366,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "C51")
+					(reference "C50")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "C47")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -3386,7 +3386,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e005f25d-f226-4355-9461-41709662c405")
-		(property "Reference" "R39"
+		(property "Reference" "R38"
 			(at 133.35 52.0699 0)
 			(effects
 				(font
@@ -3440,11 +3440,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "R39")
+					(reference "R38")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "R28")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -3460,7 +3460,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e018fc1f-343b-4065-834a-5fbd3dce7cbf")
-		(property "Reference" "C48"
+		(property "Reference" "C47"
 			(at 250.19 46.99 90)
 			(effects
 				(font
@@ -3512,11 +3512,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "C48")
+					(reference "C47")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "C44")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -3532,7 +3532,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f95edabc-5d45-440b-badf-a861b648337f")
-		(property "Reference" "C50"
+		(property "Reference" "C49"
 			(at 88.9 87.6299 0)
 			(effects
 				(font
@@ -3586,11 +3586,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "C50")
+					(reference "C49")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "C46")
+					(reference "C45")
 					(unit 1)
 				)
 			)

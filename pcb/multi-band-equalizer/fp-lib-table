@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Custom_Potentiometers")(type "KiCad")(uri "${KIPRJMOD}/CustomLibraries/Footprints/KiCad/Custom_Potentiometers.pretty")(options "")(descr ""))
+  (lib (name "Custom_Switches")(type "KiCad")(uri "${KIPRJMOD}/CustomLibraries/Footprints/KiCad/Custom_Switches.pretty")(options "")(descr ""))
+)

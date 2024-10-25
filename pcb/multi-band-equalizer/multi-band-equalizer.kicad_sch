@@ -1398,6 +1398,249 @@
 				)
 			)
 		)
+		(symbol "Custom_Switches:SF12011F-0202-20R-M-050"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "S"
+				(at 26.67 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "SF12011F-0202-20R-M-050"
+				(at 26.67 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "SF12011F020220RM050"
+				(at 26.67 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.taiwanalpha.com.tw/downloads?target=products&id=240"
+				(at 26.67 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Pushbutton Switches DPDT STOMP/FOOT SW MOM 4A30VDC 9PIN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "33.5"
+				(at 26.67 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Alpha (Taiwan)"
+				(at 26.67 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "SF12011F-0202-20R-M-050"
+				(at 26.67 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "107-SF12011F-M"
+				(at 26.67 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Alpha-Taiwan/SF12011F-0202-20R-M-050?qs=8%252Br4Hz5Xir9g1JR460gwdQ%3D%3D"
+				(at 26.67 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Part Number" ""
+				(at 26.67 -894.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Price/Stock" ""
+				(at 26.67 -994.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "SF12011F-0202-20R-M-050_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 25.4 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "NO_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "COM_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "NC_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 0 180)
+					(length 5.08)
+					(name "NO_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 -2.54 180)
+					(length 5.08)
+					(name "COM_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 30.48 -5.08 180)
+					(length 5.08)
+					(name "NC_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -1534,27 +1777,28 @@
 				)
 			)
 		)
-		(symbol "Device:Crystal"
-			(pin_numbers hide)
+		(symbol "Device:Crystal_GND24"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Y"
-				(at 0 3.81 0)
+				(at 3.175 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "Crystal"
-				(at 0 -3.81 0)
+			(property "Value" "Crystal_GND24"
+				(at 3.175 3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -1575,7 +1819,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Two pin crystal"
+			(property "Description" "Four pin crystal, GND on pins 2 and 4"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1602,7 +1846,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Crystal_0_1"
+			(symbol "Crystal_GND24_0_1"
 				(rectangle
 					(start -1.143 2.54)
 					(end 1.143 -2.54)
@@ -1616,7 +1860,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 0) (xy -1.905 0)
+						(xy -2.54 0) (xy -2.032 0)
 					)
 					(stroke
 						(width 0)
@@ -1628,7 +1872,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.905 -1.27) (xy -1.905 1.27)
+						(xy -2.032 -1.27) (xy -2.032 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -1640,7 +1884,31 @@
 				)
 				(polyline
 					(pts
-						(xy 1.905 -1.27) (xy 1.905 1.27)
+						(xy 0 -3.81) (xy 0 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.556) (xy 0 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -1.27) (xy 2.032 1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -1652,7 +1920,31 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 0) (xy 1.905 0)
+						(xy 2.032 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.286) (xy -2.54 -3.556) (xy 2.54 -3.556) (xy 2.54 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.286) (xy -2.54 3.556) (xy 2.54 3.556) (xy 2.54 2.286)
 					)
 					(stroke
 						(width 0)
@@ -1663,7 +1955,7 @@
 					)
 				)
 			)
-			(symbol "Crystal_1_1"
+			(symbol "Crystal_GND24_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 1.27)
@@ -1683,7 +1975,7 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
+					(at 0 5.08 270)
 					(length 1.27)
 					(name "2"
 						(effects
@@ -1693,6 +1985,42 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 1.27)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6260,340 +6588,6 @@
 				)
 			)
 		)
-		(symbol "Switch:SW_Push_DPDT"
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW_Push_DPDT"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Momentary Switch, dual pole double throw"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "switch dual-pole double-throw spdt ON-ON"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_Push_DPDT_0_0"
-				(circle
-					(center -2.032 -5.08)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 5.08)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -7.62)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_Push_DPDT_0_1"
-				(polyline
-					(pts
-						(xy -1.524 -4.826) (xy 2.3368 -3.0988)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 5.334) (xy 2.3368 7.0612)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.286) (xy 0 -4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.016) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 3.556) (xy 0 4.572)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 7.874) (xy 0 6.096)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 7.62)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_Push_DPDT_1_1"
-				(rectangle
-					(start -3.175 8.89)
-					(end 3.175 -8.89)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 5.08 7.62 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -7.62 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers hide)
@@ -7178,6 +7172,12 @@
 		(uuid "09ca9c36-1275-48ab-8105-60f8357a1d15")
 	)
 	(junction
+		(at 511.81 365.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0afed659-a048-4fed-ab7b-25d28048c90e")
+	)
+	(junction
 		(at 330.2 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7194,6 +7194,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "15d4a72f-9cbc-4952-8f7a-b35dcd8665c0")
+	)
+	(junction
+		(at 142.24 346.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "180ded10-361e-46e2-b886-59098385db4a")
+	)
+	(junction
+		(at 439.42 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "202c6f4f-fe8f-412a-8b32-23f551556ae0")
 	)
 	(junction
 		(at 100.33 187.96)
@@ -7412,6 +7424,12 @@
 		(uuid "6a001f7b-246c-4eca-8058-f1416ccd21e8")
 	)
 	(junction
+		(at 424.18 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b767ba4-2750-4de3-9777-40936b211ba3")
+	)
+	(junction
 		(at 214.63 368.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7436,16 +7454,22 @@
 		(uuid "7189680a-30d5-47ee-a56f-80b270086d21")
 	)
 	(junction
-		(at 125.73 358.14)
+		(at 568.96 354.33)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "723ff476-5394-44f9-8457-2069428a8135")
+		(uuid "72158954-e968-43f8-9b65-64daf3ee342d")
 	)
 	(junction
 		(at 167.64 421.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73008e18-016f-49e3-ae63-9bfeabb66d18")
+	)
+	(junction
+		(at 568.96 364.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7304cd28-1284-4b25-a952-e4540c10340e")
 	)
 	(junction
 		(at 316.23 365.76)
@@ -7464,6 +7488,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "84959749-dd68-410e-9260-27c16db50c96")
+	)
+	(junction
+		(at 125.73 359.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "87c8c6c8-6b1f-4ab1-a70f-ede5ae6af38a")
 	)
 	(junction
 		(at 163.83 255.27)
@@ -7488,6 +7518,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "90cc2f1c-b916-460b-a6b9-7778624281c2")
+	)
+	(junction
+		(at 125.73 361.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "93140b06-0b98-4bb3-b4d8-13c27e18a7d1")
 	)
 	(junction
 		(at 473.71 143.51)
@@ -7520,12 +7556,6 @@
 		(uuid "a47f5d07-3ee0-4a12-9c4b-7c875a39f333")
 	)
 	(junction
-		(at 570.23 358.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a5a9e6d3-2696-48b7-9c4e-386cf5b75f62")
-	)
-	(junction
 		(at 198.12 412.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7544,16 +7574,10 @@
 		(uuid "aa05d0eb-63b9-4aae-b2a4-6b9c9f430541")
 	)
 	(junction
-		(at 570.23 345.44)
+		(at 445.77 365.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "abd4b1c4-6d32-4c3d-a526-d0104dcff27a")
-	)
-	(junction
-		(at 125.73 360.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "af287d6d-101b-429a-9253-f0ca6d48ca97")
+		(uuid "aa9f92de-eaa8-45b4-9d53-a9f5e7fd09bf")
 	)
 	(junction
 		(at 198.12 434.34)
@@ -7592,6 +7616,12 @@
 		(uuid "b7beef73-1cb5-4595-93d8-55a1bc8e4daa")
 	)
 	(junction
+		(at 478.79 365.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7c89690-85ef-4901-b26a-94b12b5fb00e")
+	)
+	(junction
 		(at 292.1 412.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7620,6 +7650,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c0d9b449-1307-445b-bf39-d96d351eb373")
+	)
+	(junction
+		(at 382.27 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c37c5e2c-2c65-4eef-9c9f-78108848e18b")
 	)
 	(junction
 		(at 151.13 434.34)
@@ -7694,12 +7730,6 @@
 		(uuid "d47d0b31-be53-4421-8705-36c3fe9820fa")
 	)
 	(junction
-		(at 506.73 370.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d50eb38e-968d-4df9-9610-7cf6f8ee9af2")
-	)
-	(junction
 		(at 355.6 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7710,12 +7740,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d8c97378-0eff-43a5-bd2c-a6fd0324b6c6")
-	)
-	(junction
-		(at 497.84 370.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d96b955d-3ba8-4a4a-896b-a4e18f7c15cc")
 	)
 	(junction
 		(at 467.36 130.81)
@@ -7746,18 +7770,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7d2ccca-5e42-47cc-ad21-1aaa8949d4c1")
-	)
-	(junction
-		(at 488.95 370.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e813352b-21c3-438b-8220-898f2660d2e8")
-	)
-	(junction
-		(at 552.45 351.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eec633ba-38ae-46a0-baf6-d3d08aa58c0b")
 	)
 	(junction
 		(at 453.39 90.17)
@@ -8111,6 +8123,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 359.41) (xy 125.73 359.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0086db8c-9add-4567-8b1f-d54a5da907ec")
+	)
+	(wire
+		(pts
 			(xy 471.17 177.8) (xy 452.12 177.8)
 		)
 		(stroke
@@ -8231,16 +8253,6 @@
 	)
 	(wire
 		(pts
-			(xy 515.62 369.57) (xy 515.62 370.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08e8b840-4626-4ad2-bb13-435af76c24cb")
-	)
-	(wire
-		(pts
 			(xy 143.51 180.34) (xy 143.51 184.15)
 		)
 		(stroke
@@ -8251,7 +8263,17 @@
 	)
 	(wire
 		(pts
-			(xy 439.42 130.81) (xy 439.42 157.48)
+			(xy 445.77 365.76) (xy 478.79 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "094eb97d-b1eb-470c-99c9-00f430c5e30f")
+	)
+	(wire
+		(pts
+			(xy 439.42 130.81) (xy 439.42 151.13)
 		)
 		(stroke
 			(width 0)
@@ -8371,6 +8393,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 421.64) (xy 139.7 425.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e741488-973a-478f-9f24-a1a0c1e876a3")
+	)
+	(wire
+		(pts
 			(xy 397.51 280.67) (xy 397.51 276.86)
 		)
 		(stroke
@@ -8388,16 +8420,6 @@
 			(type default)
 		)
 		(uuid "1020b59f-aec8-4b5d-be12-d9dcd83aadb5")
-	)
-	(wire
-		(pts
-			(xy 570.23 355.6) (xy 570.23 358.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1071b427-fd30-4304-9fb9-84cac85f1f78")
 	)
 	(wire
 		(pts
@@ -8458,26 +8480,6 @@
 			(type default)
 		)
 		(uuid "133f2f05-06d9-4edb-9fc3-4497a9e9d89e")
-	)
-	(wire
-		(pts
-			(xy 466.09 360.68) (xy 488.95 360.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13574fd3-6f18-466f-8fa2-9e41d89a7d89")
-	)
-	(wire
-		(pts
-			(xy 466.09 350.52) (xy 506.73 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13c2da4e-5ba3-48e6-a6b6-a76a8b521f42")
 	)
 	(wire
 		(pts
@@ -8581,7 +8583,7 @@
 	)
 	(wire
 		(pts
-			(xy 455.93 347.98) (xy 440.69 347.98)
+			(xy 463.55 347.98) (xy 448.31 347.98)
 		)
 		(stroke
 			(width 0)
@@ -8598,16 +8600,6 @@
 			(type default)
 		)
 		(uuid "17db1f37-1a85-4928-8aef-df0d5db5bded")
-	)
-	(wire
-		(pts
-			(xy 488.95 370.84) (xy 488.95 372.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18133a64-394c-4a0f-b5f9-52e48f547c43")
 	)
 	(wire
 		(pts
@@ -8691,6 +8683,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 359.41) (xy 125.73 361.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c06b2d8-70b4-4fba-a426-63f0e76f338b")
+	)
+	(wire
+		(pts
 			(xy 233.68 340.36) (xy 214.63 340.36)
 		)
 		(stroke
@@ -8731,26 +8733,6 @@
 	)
 	(wire
 		(pts
-			(xy 570.23 358.14) (xy 565.15 358.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f166527-c43f-4f8f-9a0d-e5d1a852d172")
-	)
-	(wire
-		(pts
-			(xy 552.45 345.44) (xy 552.45 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f783935-1c86-4290-a110-72945aa4323e")
-	)
-	(wire
-		(pts
 			(xy 347.98 165.1) (xy 353.06 165.1)
 		)
 		(stroke
@@ -8761,7 +8743,7 @@
 	)
 	(wire
 		(pts
-			(xy 424.18 130.81) (xy 424.18 154.94)
+			(xy 424.18 130.81) (xy 424.18 151.13)
 		)
 		(stroke
 			(width 0)
@@ -8821,13 +8803,13 @@
 	)
 	(wire
 		(pts
-			(xy 570.23 345.44) (xy 584.2 345.44)
+			(xy 444.5 148.59) (xy 444.5 151.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22c34d6b-8415-48ac-bf52-47bd9d7c95d1")
+		(uuid "235274f2-b2ea-4f10-9214-4319bd3ce23d")
 	)
 	(wire
 		(pts
@@ -8961,6 +8943,26 @@
 	)
 	(wire
 		(pts
+			(xy 477.52 181.61) (xy 477.52 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b34b902-674a-4b97-a213-3ad95a361df2")
+	)
+	(wire
+		(pts
+			(xy 586.74 364.49) (xy 586.74 359.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b879ee4-510f-4edb-9516-5f2b07117d91")
+	)
+	(wire
+		(pts
 			(xy 209.55 54.61) (xy 229.87 54.61)
 		)
 		(stroke
@@ -8988,6 +8990,16 @@
 			(type default)
 		)
 		(uuid "2bdcdd0b-ad26-4d33-890d-dbed3c7136fa")
+	)
+	(wire
+		(pts
+			(xy 445.77 355.6) (xy 445.77 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c31b062-30d5-4587-9ed1-4e8955885e42")
 	)
 	(wire
 		(pts
@@ -9041,7 +9053,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 165.1) (xy 408.94 165.1)
+			(xy 353.06 165.1) (xy 382.27 165.1)
 		)
 		(stroke
 			(width 0)
@@ -9108,6 +9120,16 @@
 			(type default)
 		)
 		(uuid "307be10b-73da-41db-bd2f-f2c528707c95")
+	)
+	(wire
+		(pts
+			(xy 421.64 421.64) (xy 421.64 425.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30d05887-2f7f-48a3-a592-d1b6b2c73437")
 	)
 	(wire
 		(pts
@@ -9191,7 +9213,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 346.71) (xy 134.62 346.71)
+			(xy 146.05 346.71) (xy 142.24 346.71)
 		)
 		(stroke
 			(width 0)
@@ -9211,6 +9233,16 @@
 	)
 	(wire
 		(pts
+			(xy 482.6 234.95) (xy 482.6 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3614104e-46b1-4dc6-b859-562673eb1284")
+	)
+	(wire
+		(pts
 			(xy 386.08 440.69) (xy 339.09 440.69)
 		)
 		(stroke
@@ -9218,6 +9250,16 @@
 			(type default)
 		)
 		(uuid "368a6245-d33d-4de3-93f0-951bb7bccd0f")
+	)
+	(wire
+		(pts
+			(xy 92.71 421.64) (xy 92.71 425.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36ead7a0-6beb-42a9-a7f2-12e7c4d2a03c")
 	)
 	(wire
 		(pts
@@ -9231,13 +9273,13 @@
 	)
 	(wire
 		(pts
-			(xy 506.73 361.95) (xy 506.73 350.52)
+			(xy 280.67 421.64) (xy 280.67 425.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "38d7e07f-4660-492c-af9d-8ddc0ff7b38f")
+		(uuid "386f2911-46d3-4e1f-a126-d11066eaf403")
 	)
 	(wire
 		(pts
@@ -9248,6 +9290,16 @@
 			(type default)
 		)
 		(uuid "38ecd407-1a5f-437d-8ec1-e00817169228")
+	)
+	(wire
+		(pts
+			(xy 142.24 336.55) (xy 142.24 346.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38f2a499-5467-4df2-a73c-eab77c5da945")
 	)
 	(wire
 		(pts
@@ -9308,16 +9360,6 @@
 			(type default)
 		)
 		(uuid "3c728d06-89d6-4332-99b4-d74622974500")
-	)
-	(wire
-		(pts
-			(xy 488.95 361.95) (xy 488.95 360.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c78dd5b-f02c-4056-95b1-b377e54e6d7b")
 	)
 	(wire
 		(pts
@@ -9391,26 +9433,6 @@
 	)
 	(wire
 		(pts
-			(xy 515.62 361.95) (xy 515.62 345.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40e2c2b9-781e-4d55-9813-08e29a78a1cb")
-	)
-	(wire
-		(pts
-			(xy 125.73 360.68) (xy 125.73 363.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40e6e0c3-6fbd-457b-a4bd-0eac3a3bd4f8")
-	)
-	(wire
-		(pts
 			(xy 100.33 187.96) (xy 100.33 190.5)
 		)
 		(stroke
@@ -9418,6 +9440,16 @@
 			(type default)
 		)
 		(uuid "4120687c-d25e-46f6-8b35-703031861f2a")
+	)
+	(wire
+		(pts
+			(xy 436.88 355.6) (xy 436.88 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "422e2cc7-ac32-47d6-b524-24dcb14c4564")
 	)
 	(wire
 		(pts
@@ -9491,7 +9523,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 360.68) (xy 128.27 360.68)
+			(xy 125.73 361.95) (xy 128.27 361.95)
 		)
 		(stroke
 			(width 0)
@@ -9511,16 +9543,6 @@
 	)
 	(wire
 		(pts
-			(xy 506.73 370.84) (xy 497.84 370.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48e7ff6f-f8ef-4a71-b6eb-776cfe4625e1")
-	)
-	(wire
-		(pts
 			(xy 226.06 217.17) (xy 226.06 219.71)
 		)
 		(stroke
@@ -9528,6 +9550,16 @@
 			(type default)
 		)
 		(uuid "48eaecf2-3fda-4327-8f11-2801d6994563")
+	)
+	(wire
+		(pts
+			(xy 551.18 364.49) (xy 568.96 364.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "492850b3-4a2d-4d67-b0db-7cafae1412de")
 	)
 	(wire
 		(pts
@@ -9611,6 +9643,16 @@
 	)
 	(wire
 		(pts
+			(xy 511.81 363.22) (xy 511.81 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fcb2c7e-c187-4e08-b138-3deab27931ee")
+	)
+	(wire
+		(pts
 			(xy 386.08 381) (xy 386.08 384.81)
 		)
 		(stroke
@@ -9641,7 +9683,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 238.76) (xy 471.17 238.76)
+			(xy 452.12 238.76) (xy 478.79 238.76)
 		)
 		(stroke
 			(width 0)
@@ -9811,16 +9853,6 @@
 	)
 	(wire
 		(pts
-			(xy 497.84 361.95) (xy 497.84 355.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56a86892-c055-46d2-b38e-b6ec2abca204")
-	)
-	(wire
-		(pts
 			(xy 287.02 374.65) (xy 287.02 365.76)
 		)
 		(stroke
@@ -9891,23 +9923,13 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 246.38) (xy 471.17 246.38)
+			(xy 452.12 246.38) (xy 490.22 246.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5cedb459-33a2-4c28-b7a4-f4bcac029bcc")
-	)
-	(wire
-		(pts
-			(xy 452.12 274.32) (xy 471.17 274.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d1014e4-66f7-428a-b1d1-d7fbc20f6a5a")
 	)
 	(wire
 		(pts
@@ -9938,6 +9960,16 @@
 			(type default)
 		)
 		(uuid "5d99acce-e6e4-4408-a051-053c1b95f699")
+	)
+	(wire
+		(pts
+			(xy 436.88 365.76) (xy 445.77 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5db5e0fe-1c5c-4ca4-a33d-55f0fc1dbf53")
 	)
 	(wire
 		(pts
@@ -9981,13 +10013,13 @@
 	)
 	(wire
 		(pts
-			(xy 466.09 345.44) (xy 515.62 345.44)
+			(xy 424.18 151.13) (xy 424.18 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "60488aff-5aaf-4f91-8b78-f23bdf020e93")
+		(uuid "5f197604-4099-4c7c-8b08-cea4cf8810c8")
 	)
 	(wire
 		(pts
@@ -10021,17 +10053,17 @@
 	)
 	(wire
 		(pts
-			(xy 506.73 369.57) (xy 506.73 370.84)
+			(xy 568.96 364.49) (xy 568.96 368.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "62e0b9a2-2082-48eb-b748-76c801458db6")
+		(uuid "62a64871-c067-4849-95cb-c357417e8ca7")
 	)
 	(wire
 		(pts
-			(xy 116.84 356.87) (xy 116.84 358.14)
+			(xy 116.84 356.87) (xy 116.84 359.41)
 		)
 		(stroke
 			(width 0)
@@ -10048,16 +10080,6 @@
 			(type default)
 		)
 		(uuid "643443ed-abdd-4c67-a7d3-ca08ca701e29")
-	)
-	(wire
-		(pts
-			(xy 515.62 370.84) (xy 506.73 370.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64445cd7-5291-4206-aa46-06de5a8425a6")
 	)
 	(wire
 		(pts
@@ -10098,16 +10120,6 @@
 			(type default)
 		)
 		(uuid "697bb754-cdd9-48c6-ad50-8692c93d182c")
-	)
-	(wire
-		(pts
-			(xy 542.29 354.33) (xy 542.29 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a11da4d-0060-4c8a-9c0d-d3cdc0de9aa7")
 	)
 	(wire
 		(pts
@@ -10161,6 +10173,16 @@
 	)
 	(wire
 		(pts
+			(xy 445.77 363.22) (xy 445.77 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c57bf5d-1e2b-43b7-b1f5-9e3dc2f108fd")
+	)
+	(wire
+		(pts
 			(xy 386.08 434.34) (xy 386.08 440.69)
 		)
 		(stroke
@@ -10168,16 +10190,6 @@
 			(type default)
 		)
 		(uuid "6cbf95c5-7d6b-4dc9-8408-e021aa1da57c")
-	)
-	(wire
-		(pts
-			(xy 466.09 355.6) (xy 497.84 355.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d511dfb-f9cf-4086-bd2c-b9fd0c3157ac")
 	)
 	(wire
 		(pts
@@ -10198,6 +10210,16 @@
 			(type default)
 		)
 		(uuid "6d66bb59-e32e-447b-8076-e33be9f162db")
+	)
+	(wire
+		(pts
+			(xy 568.96 354.33) (xy 568.96 364.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e16284f-1bca-4fe5-8eb9-1abf89c96784")
 	)
 	(wire
 		(pts
@@ -10381,6 +10403,26 @@
 	)
 	(wire
 		(pts
+			(xy 520.7 355.6) (xy 520.7 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77a42bc7-2106-4106-82fa-2ac5bfe508ed")
+	)
+	(wire
+		(pts
+			(xy 445.77 350.52) (xy 463.55 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77ff1689-8c0a-4366-a695-4c7fd2f3e353")
+	)
+	(wire
+		(pts
 			(xy 238.76 63.5) (xy 254 63.5)
 		)
 		(stroke
@@ -10471,6 +10513,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 361.95) (xy 125.73 364.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b568b05-47b9-445f-a04d-66c9fdd5fc56")
+	)
+	(wire
+		(pts
 			(xy 134.62 229.87) (xy 148.59 229.87)
 		)
 		(stroke
@@ -10541,16 +10593,6 @@
 	)
 	(wire
 		(pts
-			(xy 570.23 358.14) (xy 584.2 358.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fb40c24-ce35-4f46-a985-6f99c941019b")
-	)
-	(wire
-		(pts
 			(xy 214.63 421.64) (xy 214.63 424.18)
 		)
 		(stroke
@@ -10558,6 +10600,16 @@
 			(type default)
 		)
 		(uuid "80396297-f1f0-4351-9f1f-5b675e3c7d58")
+	)
+	(wire
+		(pts
+			(xy 568.96 339.09) (xy 562.61 339.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8173f7bb-981f-40ab-9274-7acfd2077ac8")
 	)
 	(wire
 		(pts
@@ -10601,16 +10653,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 358.14) (xy 125.73 360.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83d9c7ce-25ec-4fba-b5b1-fb67dcef3620")
-	)
-	(wire
-		(pts
 			(xy 83.82 346.71) (xy 83.82 347.98)
 		)
 		(stroke
@@ -10618,16 +10660,6 @@
 			(type default)
 		)
 		(uuid "845b87cf-5be3-4784-9d8d-63e8f3843256")
-	)
-	(wire
-		(pts
-			(xy 542.29 351.79) (xy 552.45 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "846e7a02-9111-434d-8153-eb3c74d87d4c")
 	)
 	(wire
 		(pts
@@ -10658,6 +10690,16 @@
 			(type default)
 		)
 		(uuid "852fa575-db79-4adb-b5be-9190ecd8aa44")
+	)
+	(wire
+		(pts
+			(xy 436.88 345.44) (xy 463.55 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "859a5f6f-53a2-41b8-bc52-32d56754d6d0")
 	)
 	(wire
 		(pts
@@ -10771,16 +10813,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 358.14) (xy 125.73 358.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89bf7d14-1e3a-4d77-934e-97683a831b3d")
-	)
-	(wire
-		(pts
 			(xy 57.15 434.34) (xy 73.66 434.34)
 		)
 		(stroke
@@ -10798,6 +10830,16 @@
 			(type default)
 		)
 		(uuid "8a0edae5-397e-4bc3-8ed1-f826430be701")
+	)
+	(wire
+		(pts
+			(xy 481.33 271.78) (xy 481.33 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c8c6204-8e7b-40e6-a772-2b31d1ab7d44")
 	)
 	(wire
 		(pts
@@ -10828,6 +10870,16 @@
 			(type default)
 		)
 		(uuid "8e0c103b-2938-42ef-a01d-f8e3077ad9e2")
+	)
+	(wire
+		(pts
+			(xy 142.24 346.71) (xy 134.62 346.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e2d9e25-2b02-47fd-96e5-76c1b52992ef")
 	)
 	(wire
 		(pts
@@ -10921,7 +10973,7 @@
 	)
 	(wire
 		(pts
-			(xy 455.93 358.14) (xy 440.69 358.14)
+			(xy 494.03 347.98) (xy 509.27 347.98)
 		)
 		(stroke
 			(width 0)
@@ -10941,6 +10993,16 @@
 	)
 	(wire
 		(pts
+			(xy 562.61 339.09) (xy 562.61 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94b75798-c58f-4207-a980-fb47a3cb3539")
+	)
+	(wire
+		(pts
 			(xy 166.37 201.93) (xy 166.37 200.66)
 		)
 		(stroke
@@ -10948,16 +11010,6 @@
 			(type default)
 		)
 		(uuid "94e0595f-14ec-42d3-910a-d2cdf3598eed")
-	)
-	(wire
-		(pts
-			(xy 570.23 345.44) (xy 570.23 347.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95454421-4ea9-4784-897f-0c5d7a76f99b")
 	)
 	(wire
 		(pts
@@ -11091,6 +11143,16 @@
 	)
 	(wire
 		(pts
+			(xy 586.74 351.79) (xy 586.74 346.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ac5297e-9edb-42cf-8c20-67e59eb9122a")
+	)
+	(wire
+		(pts
 			(xy 81.28 240.03) (xy 81.28 242.57)
 		)
 		(stroke
@@ -11128,6 +11190,36 @@
 			(type default)
 		)
 		(uuid "9be2ced1-73d6-4197-a89b-bbc23dcaa32b")
+	)
+	(wire
+		(pts
+			(xy 551.18 359.41) (xy 551.18 364.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dae7ea0-22d2-4959-ac12-c3553c4be782")
+	)
+	(wire
+		(pts
+			(xy 494.03 350.52) (xy 511.81 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e6f9593-94e6-4043-82b5-8c3fe2666ab6")
+	)
+	(wire
+		(pts
+			(xy 486.41 234.95) (xy 486.41 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e94cf59-9b10-477f-9c6f-e146f5136630")
 	)
 	(wire
 		(pts
@@ -11178,6 +11270,16 @@
 			(type default)
 		)
 		(uuid "9f9a2e51-f45f-4408-b47a-d380f93c981b")
+	)
+	(wire
+		(pts
+			(xy 520.7 363.22) (xy 520.7 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fce7971-e839-4e8d-92c1-e8b729d0dbbc")
 	)
 	(wire
 		(pts
@@ -11281,13 +11383,13 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 351.79) (xy 552.45 358.14)
+			(xy 568.96 364.49) (xy 586.74 364.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a4d08238-195d-48e5-a6c9-a092ce136371")
+		(uuid "a4c8da49-b7e4-4bd8-81d3-7687dddd7f0e")
 	)
 	(wire
 		(pts
@@ -11298,6 +11400,16 @@
 			(type default)
 		)
 		(uuid "a510fb08-a37f-4071-81d2-a9769ef24de8")
+	)
+	(wire
+		(pts
+			(xy 419.1 148.59) (xy 419.1 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a58a484e-7773-4143-8cb4-6f054208e04d")
 	)
 	(wire
 		(pts
@@ -11331,13 +11443,13 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 358.14) (xy 134.62 358.14)
+			(xy 233.68 421.64) (xy 233.68 425.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a6b4e5b5-c011-450d-804e-a96679d99a6a")
+		(uuid "a6f7fde0-1094-4c53-9732-20a5b5e0088c")
 	)
 	(wire
 		(pts
@@ -11348,6 +11460,16 @@
 			(type default)
 		)
 		(uuid "a7071cfd-3267-45b3-912f-dba62e7b39f9")
+	)
+	(wire
+		(pts
+			(xy 490.22 234.95) (xy 490.22 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a71a43b3-0327-4977-bc94-d158672eab9f")
 	)
 	(wire
 		(pts
@@ -11391,6 +11513,26 @@
 	)
 	(wire
 		(pts
+			(xy 382.27 165.1) (xy 408.94 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7eb6ce9-7549-45bd-9d35-1fe968e8e71b")
+	)
+	(wire
+		(pts
+			(xy 382.27 162.56) (xy 382.27 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8069009-d99f-42ff-b297-de038b1b76b2")
+	)
+	(wire
+		(pts
 			(xy 198.12 412.75) (xy 245.11 412.75)
 		)
 		(stroke
@@ -11398,6 +11540,16 @@
 			(type default)
 		)
 		(uuid "a8122be3-3abd-467b-a0db-f7454c773c67")
+	)
+	(wire
+		(pts
+			(xy 374.65 421.64) (xy 374.65 425.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a847b756-caaa-47b3-adfa-546ee0b955c7")
 	)
 	(wire
 		(pts
@@ -11451,7 +11603,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 243.84) (xy 471.17 243.84)
+			(xy 452.12 243.84) (xy 486.41 243.84)
 		)
 		(stroke
 			(width 0)
@@ -11501,6 +11653,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 345.44) (xy 520.7 345.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae32cd08-7693-4c91-abba-d3c8009764ac")
+	)
+	(wire
+		(pts
 			(xy 166.37 200.66) (xy 191.77 200.66)
 		)
 		(stroke
@@ -11508,16 +11670,6 @@
 			(type default)
 		)
 		(uuid "ae558d3b-027d-473a-94da-21e7a98c951c")
-	)
-	(wire
-		(pts
-			(xy 497.84 370.84) (xy 488.95 370.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae5d97d1-cf50-4050-b3c3-6d5149ac88ef")
 	)
 	(wire
 		(pts
@@ -11541,6 +11693,16 @@
 	)
 	(wire
 		(pts
+			(xy 419.1 151.13) (xy 424.18 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b09e9c11-d235-46b0-a265-7ccd1647da5f")
+	)
+	(wire
+		(pts
 			(xy 434.34 154.94) (xy 434.34 157.48)
 		)
 		(stroke
@@ -11551,7 +11713,7 @@
 	)
 	(wire
 		(pts
-			(xy 471.17 190.5) (xy 452.12 190.5)
+			(xy 452.12 190.5) (xy 482.6 190.5)
 		)
 		(stroke
 			(width 0)
@@ -11571,13 +11733,13 @@
 	)
 	(wire
 		(pts
-			(xy 565.15 345.44) (xy 570.23 345.44)
+			(xy 511.81 365.76) (xy 478.79 365.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b236d745-9617-409f-9965-48689cd904e7")
+		(uuid "b22dd761-d1c2-4a88-ac19-704f830eca18")
 	)
 	(wire
 		(pts
@@ -11631,6 +11793,16 @@
 	)
 	(wire
 		(pts
+			(xy 482.6 186.69) (xy 482.6 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b566c6a3-96bb-4d18-b0be-35f1ff9e6d72")
+	)
+	(wire
+		(pts
 			(xy 233.68 330.2) (xy 233.68 327.66)
 		)
 		(stroke
@@ -11641,7 +11813,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 185.42) (xy 471.17 185.42)
+			(xy 452.12 185.42) (xy 477.52 185.42)
 		)
 		(stroke
 			(width 0)
@@ -11661,13 +11833,13 @@
 	)
 	(wire
 		(pts
-			(xy 497.84 369.57) (xy 497.84 370.84)
+			(xy 551.18 346.71) (xy 565.15 346.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b81416bc-bd45-469d-9c34-c4beeab39c56")
+		(uuid "b7909e86-47d7-4baa-91d6-f7df1748f1ca")
 	)
 	(wire
 		(pts
@@ -11701,6 +11873,16 @@
 	)
 	(wire
 		(pts
+			(xy 481.33 274.32) (xy 452.12 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8ab995a-bc52-495c-8b41-93bfcc1d8be3")
+	)
+	(wire
+		(pts
 			(xy 151.13 440.69) (xy 104.14 440.69)
 		)
 		(stroke
@@ -11718,6 +11900,16 @@
 			(type default)
 		)
 		(uuid "b959ada8-c3c9-468c-b4ec-3bb08f2b2445")
+	)
+	(wire
+		(pts
+			(xy 562.61 354.33) (xy 568.96 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb864ba9-4460-45cd-b8dc-e51f79390306")
 	)
 	(wire
 		(pts
@@ -11748,6 +11940,16 @@
 			(type default)
 		)
 		(uuid "bf36818b-a6ad-4606-b5c4-6ca61980d116")
+	)
+	(wire
+		(pts
+			(xy 478.79 365.76) (xy 478.79 367.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf43dbe7-caca-4d2f-b783-ab2dfb1a21e3")
 	)
 	(wire
 		(pts
@@ -11841,6 +12043,16 @@
 	)
 	(wire
 		(pts
+			(xy 551.18 351.79) (xy 551.18 346.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4c45601-0a4d-47a8-980d-f8989bdf76a9")
+	)
+	(wire
+		(pts
 			(xy 120.65 421.64) (xy 120.65 424.18)
 		)
 		(stroke
@@ -11881,6 +12093,16 @@
 	)
 	(wire
 		(pts
+			(xy 436.88 363.22) (xy 436.88 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5750c71-c986-426c-a991-5b320ed30fab")
+	)
+	(wire
+		(pts
 			(xy 185.42 194.31) (xy 191.77 194.31)
 		)
 		(stroke
@@ -11901,7 +12123,7 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 241.3) (xy 471.17 241.3)
+			(xy 452.12 241.3) (xy 482.6 241.3)
 		)
 		(stroke
 			(width 0)
@@ -11931,6 +12153,16 @@
 	)
 	(wire
 		(pts
+			(xy 478.79 234.95) (xy 478.79 238.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c82dd056-5522-4dc4-856b-1fb3e3f4e4d5")
+	)
+	(wire
+		(pts
 			(xy 438.15 77.47) (xy 438.15 78.74)
 		)
 		(stroke
@@ -11941,7 +12173,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 358.14) (xy 134.62 356.87)
+			(xy 134.62 359.41) (xy 134.62 356.87)
 		)
 		(stroke
 			(width 0)
@@ -11968,6 +12200,16 @@
 			(type default)
 		)
 		(uuid "c96698fe-1179-48b3-b524-a3193e04a495")
+	)
+	(wire
+		(pts
+			(xy 568.96 354.33) (xy 568.96 351.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9a3d155-e4a4-4c70-a426-4c73f318cef1")
 	)
 	(wire
 		(pts
@@ -12131,6 +12373,26 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 421.64) (xy 186.69 425.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d27fd479-b98b-4977-8c60-5dc313aef2dc")
+	)
+	(wire
+		(pts
+			(xy 125.73 359.41) (xy 134.62 359.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2e9da3f-1d28-406c-9e54-cbf3bd42f06c")
+	)
+	(wire
+		(pts
 			(xy 83.82 175.26) (xy 92.71 175.26)
 		)
 		(stroke
@@ -12211,6 +12473,16 @@
 	)
 	(wire
 		(pts
+			(xy 572.77 346.71) (xy 586.74 346.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d831b47d-b3be-4bcb-8bd8-4289bb27d635")
+	)
+	(wire
+		(pts
 			(xy 467.36 130.81) (xy 467.36 133.35)
 		)
 		(stroke
@@ -12268,6 +12540,16 @@
 			(type default)
 		)
 		(uuid "da796c2e-81d1-4628-9b88-4d1251f76577")
+	)
+	(wire
+		(pts
+			(xy 439.42 151.13) (xy 439.42 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dad8abee-6580-40f5-b3e7-10baed489344")
 	)
 	(wire
 		(pts
@@ -12338,16 +12620,6 @@
 			(type default)
 		)
 		(uuid "dd832b71-fef3-4332-88be-1952e17619b7")
-	)
-	(wire
-		(pts
-			(xy 488.95 369.57) (xy 488.95 370.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd8e2776-002f-4998-8b6d-155bcbd6f262")
 	)
 	(wire
 		(pts
@@ -12431,6 +12703,16 @@
 	)
 	(wire
 		(pts
+			(xy 327.66 421.64) (xy 327.66 425.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e33cdd19-ffd1-4afd-b6c3-b5a8c1679ff3")
+	)
+	(wire
+		(pts
 			(xy 154.94 421.64) (xy 157.48 421.64)
 		)
 		(stroke
@@ -12501,16 +12783,6 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 358.14) (xy 557.53 358.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5533689-4787-48d6-b5dd-193f614aee2f")
-	)
-	(wire
-		(pts
 			(xy 452.12 208.28) (xy 471.17 208.28)
 		)
 		(stroke
@@ -12521,13 +12793,23 @@
 	)
 	(wire
 		(pts
-			(xy 452.12 266.7) (xy 471.17 266.7)
+			(xy 452.12 266.7) (xy 477.52 266.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e610d5ad-0fbf-4271-b995-63e5ebdb9481")
+	)
+	(wire
+		(pts
+			(xy 511.81 355.6) (xy 511.81 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e62d8b14-0a63-4082-80fc-85905bf8aa10")
 	)
 	(wire
 		(pts
@@ -12551,13 +12833,13 @@
 	)
 	(wire
 		(pts
-			(xy 552.45 345.44) (xy 557.53 345.44)
+			(xy 444.5 151.13) (xy 439.42 151.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e82a2585-940c-4735-a7a4-c8cae5233eb7")
+		(uuid "e8187d2e-c0eb-4db5-a3a6-af71d33bbb08")
 	)
 	(wire
 		(pts
@@ -12641,6 +12923,16 @@
 	)
 	(wire
 		(pts
+			(xy 520.7 365.76) (xy 511.81 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea772ac9-b8a8-461c-a44a-a3ee32ffed70")
+	)
+	(wire
+		(pts
 			(xy 124.46 217.17) (xy 124.46 219.71)
 		)
 		(stroke
@@ -12658,6 +12950,16 @@
 			(type default)
 		)
 		(uuid "eaec4b0e-a0b1-4ced-aa9c-8c3e8a3ba3a9")
+	)
+	(wire
+		(pts
+			(xy 568.96 341.63) (xy 568.96 339.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebd7fa99-e77d-4326-aa36-51cb935748f3")
 	)
 	(wire
 		(pts
@@ -12951,6 +13253,16 @@
 	)
 	(wire
 		(pts
+			(xy 477.52 264.16) (xy 477.52 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff47c02d-a560-4b7c-a9ef-8d55e1a645be")
+	)
+	(wire
+		(pts
 			(xy 173.99 330.2) (xy 173.99 327.66)
 		)
 		(stroke
@@ -12971,7 +13283,7 @@
 	)
 	(rectangle
 		(start 433.07 334.01)
-		(end 525.78 384.81)
+		(end 529.59 375.92)
 		(stroke
 			(width 0)
 			(type default)
@@ -13067,7 +13379,7 @@
 	)
 	(rectangle
 		(start 534.67 334.01)
-		(end 590.55 367.03)
+		(end 601.98 387.35)
 		(stroke
 			(width 0)
 			(type default)
@@ -13141,9 +13453,9 @@
 		)
 		(uuid "3d6a737e-6946-4f2a-b5c1-07ca51cff36f")
 	)
-	(text "Bypass Switch"
+	(text "Bypass Switch (DPDT Foot Switch)"
 		(exclude_from_sim no)
-		(at 461.518 364.236 0)
+		(at 479.298 356.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13229,23 +13541,13 @@
 	)
 	(text "LRCK = 48 kHz\nSCLK = 64 * LRCK = 3.072 MHz\nMCLK = 256 * LRCK = 12.288 MHz"
 		(exclude_from_sim no)
-		(at 494.538 241.808 0)
+		(at 510.032 240.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "7fabb656-e735-4ba2-a5bc-9b810e9e7189")
-	)
-	(text "f(-3dB) = 1/(2π√(LC)) = 100 Hz"
-		(exclude_from_sim no)
-		(at 127 376.936 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "8329a072-1242-48d1-bf14-e21ac6fef3be")
 	)
 	(text "Audio Codec"
 		(exclude_from_sim no)
@@ -13345,6 +13647,16 @@
 		)
 		(uuid "b9568c1d-4c33-4cc8-ac01-4280ecdf95a1")
 	)
+	(text "CL (Load Capacitance) = 10 pF\nCS (Stray Capacitance) = ~3-5 pF\n\nEffective Load Capacitance = 2(CL-CS) = 2(10-5) = 10 pF"
+		(exclude_from_sim no)
+		(at 569.214 381 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "bda7b918-9cd4-4cc3-860c-e9ffd383696e")
+	)
 	(text "f(-3dB) = 1/(2πRC) = 602 Hz"
 		(exclude_from_sim no)
 		(at 127 372.872 0)
@@ -13369,7 +13681,7 @@
 	)
 	(text "Pull Down Resistors for Anti-Popping"
 		(exclude_from_sim no)
-		(at 503.174 381 0)
+		(at 479.552 361.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13490,13 +13802,13 @@
 		(uuid "0a4f8500-59fa-4167-9f2a-bf870885626a")
 	)
 	(label "ASIGNAL_OUT_R"
-		(at 440.69 358.14 0)
+		(at 509.27 347.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "0c850817-dbe4-421c-abaf-c2e65cb38f98")
 	)
@@ -13923,17 +14235,6 @@
 		)
 		(uuid "717fe0bc-ce23-4982-8c82-674f337d87c2")
 	)
-	(label "MCU_XTO"
-		(at 584.2 358.14 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "71801bf1-6d5a-4f6d-bc29-45b1de70e5e0")
-	)
 	(label "CTRL_KNB_100_HZ"
 		(at 92.71 421.64 180)
 		(fields_autoplaced yes)
@@ -13955,6 +14256,17 @@
 			(justify right bottom)
 		)
 		(uuid "738e2845-ffc9-4eff-80dc-bc5a19773dec")
+	)
+	(label "ASIGNAL_IN_R"
+		(at 509.27 350.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "741daaff-a85c-457b-9000-278be142c4c4")
 	)
 	(label "CODEC_AINA_BUFF-"
 		(at 229.87 66.04 180)
@@ -13992,6 +14304,17 @@
 		)
 		(uuid "7b3a115e-dff0-4d66-9a8a-32ba46f2d0d9")
 	)
+	(label "MCU_XTI"
+		(at 551.18 346.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f605e0e-16b0-4c59-b439-a4c23acb718f")
+	)
 	(label "CTRL_KNB_1600_HZ"
 		(at 280.67 421.64 180)
 		(fields_autoplaced yes)
@@ -14004,7 +14327,7 @@
 		(uuid "8653e5de-cc6e-45aa-acb6-b62ee5692ce9")
 	)
 	(label "ASIGNAL_OUT_L"
-		(at 440.69 347.98 0)
+		(at 448.31 347.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14058,6 +14381,17 @@
 			(justify right bottom)
 		)
 		(uuid "8ca79254-65f7-4a05-a2de-f2f7d09b7a2e")
+	)
+	(label "ASIGNAL_IN_L"
+		(at 448.31 350.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8cfe061e-9b29-41fd-a28a-8a5673559853")
 	)
 	(label "MCU_XTI"
 		(at 389.89 180.34 0)
@@ -14208,17 +14542,6 @@
 		)
 		(uuid "aaa9896f-b8d9-4213-9b9b-7f2813c87a54")
 	)
-	(label "ASIGNAL_IN_L"
-		(at 481.33 350.52 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "aadc2414-a7b8-4492-8e08-56aff0bd0f70")
-	)
 	(label "CODEC_NRST"
 		(at 88.9 207.01 0)
 		(fields_autoplaced yes)
@@ -14254,17 +14577,6 @@
 		)
 		(uuid "b4884aab-3848-41e9-833d-9d28f75f8dbf")
 	)
-	(label "CODEC_AOUT_L"
-		(at 481.33 345.44 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b8f15805-8aae-4e84-b029-f5791bcc06c5")
-	)
 	(label "ASIGNAL_IN_R"
 		(at 326.39 359.41 180)
 		(fields_autoplaced yes)
@@ -14277,7 +14589,7 @@
 		(uuid "bac6fc4f-d677-43b0-91e5-3e7e88603aae")
 	)
 	(label "CODEC_AOUT_R"
-		(at 481.33 355.6 180)
+		(at 509.27 345.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14285,7 +14597,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c0ecc293-c66b-4879-894d-de84ae9498c8")
+		(uuid "c24cef3a-e25d-45e2-8379-3d43e7c727ff")
 	)
 	(label "I2S_LRCK"
 		(at 471.17 238.76 180)
@@ -14309,6 +14621,17 @@
 			(justify right bottom)
 		)
 		(uuid "c4920f1b-2239-426d-aa68-5a257b39013c")
+	)
+	(label "MCU_XTO"
+		(at 586.74 346.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c83ae9d1-0cce-4d8f-bd67-b0eed5440db2")
 	)
 	(label "CODEC_AOUTB-"
 		(at 238.76 105.41 0)
@@ -14450,6 +14773,17 @@
 		)
 		(uuid "e33de520-b286-49b8-83da-3a5b2d241ad9")
 	)
+	(label "CODEC_AOUT_L"
+		(at 448.31 345.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eab4e877-b3aa-44ae-8b0a-27b516bda62b")
+	)
 	(label "ASIGNAL_IN_L"
 		(at 298.45 359.41 180)
 		(fields_autoplaced yes)
@@ -14473,17 +14807,6 @@
 		)
 		(uuid "ebbaf368-42e2-48d8-bcf2-6dbf3ee51b49")
 	)
-	(label "ASIGNAL_IN_R"
-		(at 481.33 360.68 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f23f1be5-cd31-483c-bd2f-0b3245f14ded")
-	)
 	(label "ASIGNAL_IN_R+"
 		(at 124.46 97.79 180)
 		(fields_autoplaced yes)
@@ -14505,17 +14828,6 @@
 			(justify left bottom)
 		)
 		(uuid "f3fab70a-65e8-43e4-bbe9-8339ed89e91e")
-	)
-	(label "MCU_XTI"
-		(at 584.2 345.44 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f984d7ba-9457-4550-ad11-856ee613c128")
 	)
 	(label "CODEC_VCOM"
 		(at 139.7 111.76 0)
@@ -14551,7 +14863,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00cea7e0-47f9-4f90-9b37-df9b822b5fa0")
-		(property "Reference" "C40"
+		(property "Reference" "C39"
 			(at 265.43 426.7199 0)
 			(effects
 				(font
@@ -14605,7 +14917,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C40")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -14621,7 +14933,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "033bfa3e-1d31-4d0c-8f5e-062e61fb23c0")
-		(property "Reference" "R12"
+		(property "Reference" "R11"
 			(at 90.17 236.22 90)
 			(effects
 				(font
@@ -14673,7 +14985,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R12")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -14750,35 +15062,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 104.14 421.64 0)
+		(lib_id "Connector:TestPoint")
+		(at 481.33 271.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "05934d14-2833-43dd-8f65-e02a6a906ecf")
-		(property "Reference" "RV2"
-			(at 101.6 420.3699 0)
+		(uuid "04bf7a61-aebf-4bd4-b373-5d8248533457")
+		(property "Reference" "TP11"
+			(at 479.552 266.446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "5k"
-			(at 101.6 422.9099 0)
+		(property "Value" "TestPoint"
+			(at 483.87 269.7479 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 103.886 410.464 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 486.41 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14786,8 +15098,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 101.6 421.64 0)
+		(property "Datasheet" "~"
+			(at 486.41 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14795,8 +15107,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Slide Potentiometer"
-			(at 101.6 421.64 0)
+		(property "Description" "test point"
+			(at 481.33 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14805,18 +15117,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "9ec77626-84d6-42c6-a1dd-c5ebd1004648")
-		)
-		(pin "3"
-			(uuid "c92958fb-d03e-4f97-849f-01f46cf8892e")
-		)
-		(pin "2"
-			(uuid "23df5953-f914-46fb-90dd-3d42026cd52f")
+			(uuid "0649b9e9-8d5d-43a8-af1a-b95c3334113b")
 		)
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV2")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -14832,7 +15138,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05ffc713-a852-4dc6-b8ce-4f68fafe681e")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR023"
 			(at 214.63 328.93 0)
 			(effects
 				(font
@@ -14882,7 +15188,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR026")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -14898,7 +15204,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08804216-4fba-4150-ad96-6e65b9501f2d")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR022"
 			(at 165.1 328.93 0)
 			(effects
 				(font
@@ -14948,7 +15254,7 @@
 		(instances
 			(project ""
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR025")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -14964,7 +15270,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0bcc7037-7ce1-4559-988a-7fdf256089e2")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR012"
 			(at 100.33 196.85 0)
 			(effects
 				(font
@@ -15014,7 +15320,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR015")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -15030,7 +15336,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c45cb91-dad5-41d4-acbc-6805266b714c")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR025"
 			(at 146.05 347.98 0)
 			(effects
 				(font
@@ -15080,80 +15386,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 292.1 421.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "106a640c-2397-49b3-85d0-cfd4849f262a")
-		(property "Reference" "RV6"
-			(at 289.56 420.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "5k"
-			(at 289.56 422.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 291.846 410.464 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 289.56 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Slide Potentiometer"
-			(at 289.56 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "acd2f6b3-ea93-4414-b3fc-7afcdc8a4532")
-		)
-		(pin "3"
-			(uuid "047aa25f-c1bb-4624-a821-8bec4072ab23")
-		)
-		(pin "2"
-			(uuid "3d71e0d3-ea66-4a73-afb0-9b90ab941014")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV6")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -15169,7 +15402,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "10cf83e9-c3ca-4e08-afe5-801792d3946d")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR024"
 			(at 187.96 349.25 0)
 			(effects
 				(font
@@ -15219,7 +15452,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR027")
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 421.64 425.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13e1b7a5-d437-4f18-be7a-1429617d1893")
+		(property "Reference" "TP20"
+			(at 423.418 430.784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 419.1 427.4821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 416.56 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 416.56 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 421.64 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f488da47-f27e-4d0e-82de-3a734f854016")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -15235,7 +15535,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "14016cd6-60af-4d7f-8122-fec20189058a")
-		(property "Reference" "C24"
+		(property "Reference" "C23"
 			(at 388.62 283.2099 0)
 			(effects
 				(font
@@ -15289,7 +15589,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C24")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -15305,7 +15605,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18f324c6-bd61-45d0-8e4f-3466ec36cf8b")
-		(property "Reference" "C42"
+		(property "Reference" "C41"
 			(at 359.41 426.7199 0)
 			(effects
 				(font
@@ -15359,7 +15659,80 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C42")
+					(reference "C41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 198.12 421.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1bb42ff3-2292-40e1-93dd-02c7b4421ea2")
+		(property "Reference" "RV4"
+			(at 195.58 420.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 195.58 422.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 197.866 410.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Slide Potentiometer"
+			(at 195.58 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "1f0fc8e0-9c2d-4b8a-bb7e-9a4c3aa7add8")
+		)
+		(pin "2"
+			(uuid "9e24ed7a-69b5-4d4d-8a7a-fe7cc2d94be5")
+		)
+		(pin "1"
+			(uuid "131906fe-4afa-4764-8af1-a7c55003ca70")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "RV4")
 					(unit 1)
 				)
 			)
@@ -15375,7 +15748,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c4af367-6157-417d-848a-6472fe8681fe")
-		(property "Reference" "C19"
+		(property "Reference" "C18"
 			(at 116.84 212.0899 0)
 			(effects
 				(font
@@ -15429,7 +15802,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C19")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -16010,6 +16383,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 186.69 425.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "257424b8-de82-457f-8d7e-8e388ab382b1")
+		(property "Reference" "TP15"
+			(at 188.468 430.784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 184.15 427.4821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 181.61 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 186.69 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6dc1c8fc-cb2a-4252-a891-a4a70c5bc3d2")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 165.1 374.65 0)
 		(unit 1)
@@ -16019,7 +16459,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "261bb713-a385-4d70-ac1b-36c3bf40d0a1")
-		(property "Reference" "C33"
+		(property "Reference" "C32"
 			(at 168.91 373.3799 0)
 			(effects
 				(font
@@ -16073,7 +16513,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C33")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -16089,7 +16529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "286c1d38-8cce-4ffd-85a9-52dad060795c")
-		(property "Reference" "C39"
+		(property "Reference" "C38"
 			(at 218.44 426.7199 0)
 			(effects
 				(font
@@ -16143,7 +16583,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C39")
+					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 444.5 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2874c95d-d4b9-4e29-a656-e4ec41551743")
+		(property "Reference" "TP2"
+			(at 442.722 143.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 447.04 146.5579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 449.58 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 449.58 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 444.5 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25ca3096-d1a1-44b1-8091-b83cbb542994")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -16227,7 +16734,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2aa333b8-939b-4c36-9c63-767a95ab2ed4")
-		(property "Reference" "R23"
+		(property "Reference" "R22"
 			(at 208.28 415.29 90)
 			(effects
 				(font
@@ -16279,7 +16786,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R23")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -16354,86 +16861,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 584.2 170.18 0)
+		(at 511.81 359.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2c4b4fec-f8d1-496f-81c3-f83f01dd1971")
-		(property "Reference" "R5"
-			(at 586.74 168.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 586.74 171.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 582.422 170.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 584.2 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 584.2 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "20dfab43-6204-44d8-8efa-24bf11da4b4f")
-		)
-		(pin "1"
-			(uuid "ebda20a1-2554-44c1-8106-08f205a3ffed")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 506.73 365.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2d088b57-262c-4fe8-b767-e303d85125cf")
-		(property "Reference" "R17"
-			(at 509.27 364.4899 0)
+		(uuid "2dfa85ff-e0e2-4eb5-8cba-11ae74728a0e")
+		(property "Reference" "R16"
+			(at 514.35 358.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16442,7 +16879,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 509.27 367.0299 0)
+			(at 514.35 360.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16451,7 +16888,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 504.952 365.76 90)
+			(at 510.032 359.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16460,7 +16897,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 506.73 365.76 0)
+			(at 511.81 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16469,7 +16906,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 506.73 365.76 0)
+			(at 511.81 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16478,15 +16915,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "ed86268a-c260-4c22-81e8-7d5afd47f27d")
+			(uuid "a4487aca-0a37-45c5-9f0e-399a4f88a9db")
 		)
 		(pin "1"
-			(uuid "4f00bbd2-35f4-418a-adea-c0219a50d392")
+			(uuid "3bb0ca70-9e9b-41d2-9c69-aea42595142a")
 		)
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R17")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -16570,7 +17007,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ec1c6b9-aaea-422d-944b-c9077e3cac11")
-		(property "Reference" "C34"
+		(property "Reference" "C33"
 			(at 218.44 373.3799 0)
 			(effects
 				(font
@@ -16624,7 +17061,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C34")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -16640,7 +17077,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "32483daa-035e-4198-a03d-16d01df2b095")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR026"
 			(at 101.6 361.95 0)
 			(effects
 				(font
@@ -16690,7 +17127,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR030")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -16706,7 +17143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "32c812e7-c62c-43bd-b49d-990c12f67d12")
-		(property "Reference" "C43"
+		(property "Reference" "C42"
 			(at 406.4 426.7199 0)
 			(effects
 				(font
@@ -16760,7 +17197,147 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C43")
+					(reference "C42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 419.1 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3382b423-6845-46c1-a1a9-26f1ff746dcd")
+		(property "Reference" "TP1"
+			(at 417.322 143.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 421.64 146.5579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 424.18 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 424.18 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 419.1 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "518fdfdb-31a8-4324-9c31-e63dbbc8a60a")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 57.15 421.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33bace94-6270-4597-a979-1c720533f268")
+		(property "Reference" "RV1"
+			(at 54.61 420.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 54.61 422.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 56.896 410.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Slide Potentiometer"
+			(at 54.61 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "eb2ccf75-0471-4e6a-9dc8-5bef64b984f9")
+		)
+		(pin "2"
+			(uuid "c9055840-26f1-4568-8472-64baf5187129")
+		)
+		(pin "1"
+			(uuid "e648b9fc-08e4-44c4-9846-625c1c1a7e69")
+		)
+		(instances
+			(project ""
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "RV1")
 					(unit 1)
 				)
 			)
@@ -16776,7 +17353,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "34c36e10-2e67-4da6-9629-b2a59d667778")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR019"
 			(at 130.81 266.7 0)
 			(effects
 				(font
@@ -16826,7 +17403,80 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR022")
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 104.14 421.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "359650ce-ee7d-48a8-9772-402127d1742d")
+		(property "Reference" "RV2"
+			(at 101.6 420.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 101.6 422.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 103.886 410.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Slide Potentiometer"
+			(at 101.6 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2544781b-414e-48e8-b082-a0901b88ec90")
+		)
+		(pin "2"
+			(uuid "e50c43e6-9b31-4ae2-b391-09486694b6f7")
+		)
+		(pin "1"
+			(uuid "024e078f-058e-4885-a59e-0cffe413e6e9")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "RV2")
 					(unit 1)
 				)
 			)
@@ -16891,6 +17541,79 @@
 			(project ""
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
 					(reference "FID1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal_GND24")
+		(at 568.96 346.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36a28a7a-e4fc-42d6-941e-34c30b119f3c")
+		(property "Reference" "Y1"
+			(at 575.31 338.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "24 MHz"
+			(at 575.31 340.868 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm"
+			(at 568.96 346.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 568.96 346.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Four pin crystal, GND on pins 2 and 4"
+			(at 568.96 346.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a3148daa-71d0-4c9d-ad1f-06b122a834ae")
+		)
+		(pin "1"
+			(uuid "6c965574-0b47-4a61-9d53-dc0085eb4c77")
+		)
+		(pin "3"
+			(uuid "78453590-2289-497d-b262-54e5f4332a6d")
+		)
+		(pin "4"
+			(uuid "e4eaee4b-ed23-4911-9495-38c7057b19d2")
+		)
+		(instances
+			(project ""
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "Y1")
 					(unit 1)
 				)
 			)
@@ -16971,7 +17694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a353729-2468-4f84-af6b-dfc3e4db91eb")
-		(property "Reference" "R8"
+		(property "Reference" "R7"
 			(at 63.5 212.0899 0)
 			(effects
 				(font
@@ -17025,74 +17748,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 561.34 345.44 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3e0049fd-7467-47a0-ab2e-4eb783f5bc10")
-		(property "Reference" "C29"
-			(at 561.34 339.344 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C"
-			(at 561.34 341.884 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 557.53 346.4052 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 561.34 345.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 561.34 345.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "82e9fed8-9110-4e28-a359-18d4aba0ad88")
-		)
-		(pin "2"
-			(uuid "582102fd-e47c-4d05-9bd7-d8576ed6ebcb")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C29")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -17126,7 +17782,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 453.39 83.82 0)
 			(effects
 				(font
@@ -17178,7 +17834,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40e70c0d-b9df-4ca8-b541-5eb3c27eb66a")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR036"
 			(at 57.15 450.85 0)
 			(effects
 				(font
@@ -17228,7 +17884,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR039")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -17377,7 +18033,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45c02792-3682-427f-8550-ca1e2bd06f17")
-		(property "Reference" "R26"
+		(property "Reference" "R25"
 			(at 349.25 415.29 90)
 			(effects
 				(font
@@ -17429,7 +18085,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R26")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -17445,7 +18101,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45d0210c-b1b9-4b85-8fa0-2cd44080e311")
-		(property "Reference" "R27"
+		(property "Reference" "R26"
 			(at 396.24 415.29 90)
 			(effects
 				(font
@@ -17497,41 +18153,42 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R27")
+					(reference "R26")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 488.95 372.11 0)
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 292.1 421.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "45f67d7d-7e53-49a0-ba92-1c9aa8a8d2a4")
-		(property "Reference" "#PWR035"
-			(at 488.95 378.46 0)
+		(uuid "48dea059-6e48-4427-a1cf-a61803efd010")
+		(property "Reference" "RV6"
+			(at 289.56 420.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify right)
 			)
 		)
-		(property "Value" "GND"
-			(at 488.95 377.19 0)
+		(property "Value" "5k"
+			(at 289.56 422.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 488.95 372.11 0)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 291.846 410.464 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17540,7 +18197,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 488.95 372.11 0)
+			(at 289.56 421.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17548,8 +18205,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 488.95 372.11 0)
+		(property "Description" "Slide Potentiometer"
+			(at 289.56 421.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17557,83 +18214,19 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "9484b755-ff88-477e-8088-4d05e1b60ff2")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR035")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 515.62 365.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4778d4d9-6dcd-4728-a2a0-0be6cc8f0122")
-		(property "Reference" "R18"
-			(at 518.16 364.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1M"
-			(at 518.16 367.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 513.842 365.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 515.62 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 515.62 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "3"
+			(uuid "813665c7-a68a-4401-94eb-5809c13b062c")
 		)
 		(pin "2"
-			(uuid "4a8d8007-20ab-489c-81c7-5a2892045abe")
+			(uuid "5a787f26-25d8-4a56-a60a-df1b56acfb92")
 		)
 		(pin "1"
-			(uuid "d31b69c3-59f1-4206-a444-d380e3ce199f")
+			(uuid "0fd1b69c-d7b1-4e15-a9ec-342183c58bc9")
 		)
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R18")
+					(reference "RV6")
 					(unit 1)
 				)
 			)
@@ -17649,7 +18242,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "48f63944-142f-4837-99eb-75509a5a4c2f")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR015"
 			(at 240.03 228.6 0)
 			(effects
 				(font
@@ -17699,7 +18292,73 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR018")
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 568.96 368.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "493b96a3-f842-4a40-8a9f-3333f22d725d")
+		(property "Reference" "#PWR032"
+			(at 568.96 374.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 568.96 373.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 568.96 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 568.96 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 568.96 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c8bec665-8176-4cab-9511-06e083f74f66")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -17733,7 +18392,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 476.25 83.82 0)
 			(effects
 				(font
@@ -17851,7 +18510,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4aff41dd-d4d0-4b8e-a3ad-50f5d2de26b2")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR027"
 			(at 74.93 364.49 0)
 			(effects
 				(font
@@ -17901,7 +18560,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR031")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -17917,7 +18576,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b09e01a-d3fe-4913-aee8-57b81c0a57b3")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR021"
 			(at 429.26 308.61 0)
 			(effects
 				(font
@@ -17967,7 +18626,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR024")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -18001,7 +18660,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 425.45 67.31 0)
 			(effects
 				(font
@@ -18191,7 +18850,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "52f40196-b3ee-4435-ac26-75f773b1dcc5")
-		(property "Reference" "R11"
+		(property "Reference" "R10"
 			(at 365.76 233.6799 0)
 			(effects
 				(font
@@ -18245,7 +18904,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R11")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -18392,7 +19051,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5669c917-f3dc-4337-8a03-9d5d0bccdac1")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR013"
 			(at 67.31 208.28 0)
 			(effects
 				(font
@@ -18442,7 +19101,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR016")
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 482.6 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5d9ae7bf-322e-4f05-b57b-5c740ea148a8")
+		(property "Reference" "TP5"
+			(at 480.822 181.356 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 485.14 184.6579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 487.68 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 487.68 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 482.6 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e4c83495-e9d8-4a88-bf20-54625ec0c9f5")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -18522,215 +19248,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 568.96 179.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5ea69665-fac0-40f6-a7d0-89864f41581a")
-		(property "Reference" "#PWR012"
-			(at 568.96 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 568.96 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 568.96 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 568.96 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 568.96 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "de8b5d70-da4a-4fb1-aa05-ea6d69bbacd8")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 198.12 421.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5ee71d8d-eea3-4146-a4fc-941143ab33c9")
-		(property "Reference" "RV4"
-			(at 195.58 420.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "5k"
-			(at 195.58 422.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 197.866 410.464 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Slide Potentiometer"
-			(at 195.58 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5404fd63-6616-4acf-8a76-b9ba1a476f0e")
-		)
-		(pin "3"
-			(uuid "4a5840a8-aa16-430a-8ed4-c1a9bb1e2648")
-		)
-		(pin "2"
-			(uuid "faf0c6a4-f943-4e8b-b26e-18d49bc2ea5f")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 497.84 365.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6094f442-5883-4fd6-9a9e-1956e71f5109")
-		(property "Reference" "R16"
-			(at 500.38 364.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1M"
-			(at 500.38 367.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 496.062 365.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 497.84 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 497.84 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9001890b-3899-4051-8da5-ed361c37c5df")
-		)
-		(pin "1"
-			(uuid "ba72a7a1-e832-4fa4-8fff-35a10c79e309")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 73.66 427.99 0)
 		(unit 1)
@@ -18740,7 +19257,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6173baef-8760-407a-94be-edcede131693")
-		(property "Reference" "C36"
+		(property "Reference" "C35"
 			(at 77.47 426.7199 0)
 			(effects
 				(font
@@ -18794,7 +19311,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C36")
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -18810,7 +19327,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "62994d3c-1609-441f-a6e9-a4cdf6d0d34d")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR030"
 			(at 214.63 369.57 0)
 			(effects
 				(font
@@ -18860,7 +19377,7 @@
 		(instances
 			(project ""
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR034")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -18876,7 +19393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "63132bf5-48e6-4c0a-812c-126dafb70235")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR034"
 			(at 187.96 389.89 0)
 			(effects
 				(font
@@ -18926,7 +19443,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR037")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -19160,7 +19677,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68d87832-f43c-404c-9fc5-5fc4fe7a9f3f")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR018"
 			(at 163.83 264.16 0)
 			(effects
 				(font
@@ -19210,7 +19727,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR021")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -19226,7 +19743,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c3d8b07-eb05-49c2-96ae-45cd35eae372")
-		(property "Reference" "R10"
+		(property "Reference" "R9"
 			(at 127 212.0899 0)
 			(effects
 				(font
@@ -19280,7 +19797,77 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R10")
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 436.88 359.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6c68dc0a-187a-406b-ba19-03518bd85495")
+		(property "Reference" "R14"
+			(at 439.42 358.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1M"
+			(at 439.42 360.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 435.102 359.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 436.88 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 436.88 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e4bf2841-409a-46fd-80cd-0f2f22ebfc8c")
+		)
+		(pin "1"
+			(uuid "2024059a-2cbd-46d9-975f-7a8f75e07479")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -19354,44 +19941,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 245.11 421.64 0)
+		(lib_id "Device:C")
+		(at 586.74 355.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6fcea0ca-25e4-43d9-9788-565a62d35009")
-		(property "Reference" "RV5"
-			(at 242.57 420.3699 0)
+		(uuid "6d48a307-3698-4ed0-8e39-6c761dbc2cef")
+		(property "Reference" "C31"
+			(at 581.66 354.584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "5k"
-			(at 242.57 422.9099 0)
+		(property "Value" "10p"
+			(at 581.66 357.124 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 244.856 410.464 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 242.57 421.64 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 587.7052 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19399,8 +19974,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Slide Potentiometer"
-			(at 242.57 421.64 0)
+		(property "Datasheet" "~"
+			(at 586.74 355.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 586.74 355.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19409,18 +19993,234 @@
 			)
 		)
 		(pin "1"
-			(uuid "f16e8e28-8c05-4045-847b-d6a62f0026ba")
-		)
-		(pin "3"
-			(uuid "3de15936-f806-4b09-b018-25c30688793c")
+			(uuid "fd4b4bc4-8a85-47ee-b87e-4da4a5b45e0d")
 		)
 		(pin "2"
-			(uuid "5e7f751b-1e27-40ef-9884-766781ac82f5")
+			(uuid "12499e82-f414-4ce9-a477-0f3f5d5b3d82")
 		)
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV5")
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 478.79 234.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f271e0a-cab0-48a3-ba04-99c10b167668")
+		(property "Reference" "TP6"
+			(at 477.012 229.616 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 481.33 232.9179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 483.87 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 483.87 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 478.79 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2bdb44b9-c8b1-4979-b99a-44ccf6869cba")
+		)
+		(instances
+			(project ""
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_Switches:SF12011F-0202-20R-M-050")
+		(at 463.55 345.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f7fbf43-9619-4a13-8424-c3812bdc5e8a")
+		(property "Reference" "S1"
+			(at 478.79 337.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SF12011F-0202-20R-M-050"
+			(at 478.79 340.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom_Switches:SF12011F020220RM050"
+			(at 490.22 440.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.taiwanalpha.com.tw/downloads?target=products&id=240"
+			(at 490.22 540.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Pushbutton Switches DPDT STOMP/FOOT SW MOM 4A30VDC 9PIN"
+			(at 463.55 345.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "33.5"
+			(at 490.22 740.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Alpha (Taiwan)"
+			(at 490.22 840.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SF12011F-0202-20R-M-050"
+			(at 490.22 940.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "107-SF12011F-M"
+			(at 490.22 1040.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Alpha-Taiwan/SF12011F-0202-20R-M-050?qs=8%252Br4Hz5Xir9g1JR460gwdQ%3D%3D"
+			(at 490.22 1140.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 490.22 1240.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 490.22 1340.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "c1b655a5-fdb0-451e-b61f-837b74cfedec")
+		)
+		(pin "4"
+			(uuid "04c1b683-ebc8-46d0-8d5c-48d63797b716")
+		)
+		(pin "3"
+			(uuid "2d0de22e-b04a-4209-8721-b4aad804a0fa")
+		)
+		(pin "1"
+			(uuid "b9af7654-16b0-4a0d-b3bf-c147cd5b9e9d")
+		)
+		(pin "2"
+			(uuid "41e6e36d-b975-430d-87db-a7a8efb37e9c")
+		)
+		(pin "6"
+			(uuid "010c970a-302d-4cad-84f4-955a9576235d")
+		)
+		(instances
+			(project ""
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "S1")
 					(unit 1)
 				)
 			)
@@ -19436,7 +20236,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70a18481-31d1-4f00-8f37-e1b793fadc90")
-		(property "Reference" "C30"
+		(property "Reference" "C28"
 			(at 120.65 351.7899 0)
 			(effects
 				(font
@@ -19490,7 +20290,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C30")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -19506,7 +20306,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74ebcdfe-43da-4455-b499-fb7ac6dcbd19")
-		(property "Reference" "R22"
+		(property "Reference" "R21"
 			(at 161.29 415.29 90)
 			(effects
 				(font
@@ -19558,7 +20358,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R22")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -19574,7 +20374,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7639361b-00c5-41f5-b242-16d3087cbf51")
-		(property "Reference" "C20"
+		(property "Reference" "C19"
 			(at 214.63 212.0899 0)
 			(effects
 				(font
@@ -19628,7 +20428,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C20")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -19708,7 +20508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78c9b715-c7a7-47c8-a814-be412e5da206")
-		(property "Reference" "R9"
+		(property "Reference" "R8"
 			(at 76.2 212.0899 0)
 			(effects
 				(font
@@ -19762,7 +20562,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R9")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -19778,7 +20578,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78fc02bf-c082-4962-b24c-eabb8a7a344a")
-		(property "Reference" "C22"
+		(property "Reference" "C21"
 			(at 214.63 224.7899 0)
 			(effects
 				(font
@@ -19832,7 +20632,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C22")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -19848,7 +20648,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79f459f6-d199-4bb7-855b-2bcac6f35709")
-		(property "Reference" "R24"
+		(property "Reference" "R23"
 			(at 255.27 415.29 90)
 			(effects
 				(font
@@ -19900,7 +20700,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R24")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -19934,7 +20734,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 487.68 83.82 0)
 			(effects
 				(font
@@ -19978,7 +20778,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 125.73 363.22 0)
+		(at 125.73 364.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19986,8 +20786,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7d9802da-4174-4854-960a-e7b91ba57f4f")
-		(property "Reference" "#PWR032"
-			(at 125.73 369.57 0)
+		(property "Reference" "#PWR028"
+			(at 125.73 370.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19996,7 +20796,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 125.73 368.3 0)
+			(at 125.73 369.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20004,7 +20804,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125.73 363.22 0)
+			(at 125.73 364.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20013,7 +20813,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 363.22 0)
+			(at 125.73 364.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20022,7 +20822,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 125.73 363.22 0)
+			(at 125.73 364.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20036,7 +20836,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR032")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -20052,7 +20852,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e0a9ff2-7fa7-4ff4-bb1f-0b0564d86888")
-		(property "Reference" "C37"
+		(property "Reference" "C36"
 			(at 124.46 426.7199 0)
 			(effects
 				(font
@@ -20106,7 +20906,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C37")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -20386,6 +21186,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 486.41 234.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8510eb49-0c9a-4116-8c9a-567b7a020797")
+		(property "Reference" "TP8"
+			(at 484.632 229.616 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 488.95 232.9179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 491.49 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 491.49 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 486.41 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b65dfb5c-170b-4c99-8162-69f157f72bf1")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 438.15 54.61 0)
 		(unit 1)
@@ -20453,6 +21320,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 478.79 367.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8563e923-2773-4b4c-b203-a5c088ffdee2")
+		(property "Reference" "#PWR031"
+			(at 478.79 373.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 478.79 372.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 478.79 367.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 478.79 367.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 478.79 367.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb04fb4b-810e-45c1-a2cb-f60517219b98")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 391.16 293.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20461,7 +21394,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "858489ed-ccec-4abb-8539-387b6f2eb355")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR020"
 			(at 391.16 299.72 0)
 			(effects
 				(font
@@ -20511,7 +21444,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR023")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -20527,7 +21460,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85adca26-fd43-4fb2-bf43-34f53cb887b9")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR016"
 			(at 81.28 243.84 0)
 			(effects
 				(font
@@ -20577,7 +21510,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR019")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -20593,7 +21526,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86e8ddfe-b5b5-429c-876a-030ba6f5575b")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR035"
 			(at 386.08 391.16 0)
 			(effects
 				(font
@@ -20643,7 +21576,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR038")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -20659,7 +21592,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8785a7de-735d-4537-9f16-80274d90fb0f")
-		(property "Reference" "C26"
+		(property "Reference" "C25"
 			(at 168.91 332.7399 0)
 			(effects
 				(font
@@ -20713,7 +21646,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C26")
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 477.52 264.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8805f45c-1bb7-478d-b994-afd643995f85")
+		(property "Reference" "TP10"
+			(at 475.742 258.826 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 480.06 262.1279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 482.6 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 482.6 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 477.52 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebaab823-306f-448f-9d0f-a5908b0d4bc9")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -20747,7 +21747,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 464.82 83.82 0)
 			(effects
 				(font
@@ -20790,6 +21790,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 151.13 421.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89489d89-8f49-4389-aa68-b6a7a18fd31f")
+		(property "Reference" "RV3"
+			(at 148.59 420.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 148.59 422.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 150.876 410.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Slide Potentiometer"
+			(at 148.59 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2fb1f731-0e29-4616-a2f2-2ed17b4f8d5c")
+		)
+		(pin "2"
+			(uuid "f323ba37-80b6-48d7-a6c5-bb50e14db86c")
+		)
+		(pin "1"
+			(uuid "cbb7b02d-0f93-4fb8-a565-4c82bb513bef")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "RV3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 342.9 165.1 0)
 		(unit 1)
@@ -20814,7 +21887,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H4.3mm"
 			(at 342.9 160.02 0)
 			(effects
 				(font
@@ -20932,7 +22005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8cf4117e-f4aa-4be1-a2f4-fcf39c8ca142")
-		(property "Reference" "R13"
+		(property "Reference" "R12"
 			(at 133.35 252.7299 0)
 			(effects
 				(font
@@ -20986,7 +22059,141 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R13")
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 327.66 425.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d2d79e8-d2fa-43b8-a09d-6d3e9f0a6896")
+		(property "Reference" "TP18"
+			(at 329.438 430.784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 325.12 427.4821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 322.58 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 322.58 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 327.66 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f9362c0-cd91-4502-b308-f24bf8b326b2")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 142.24 336.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d6a525c-7f66-4aa8-baf5-7357c284084b")
+		(property "Reference" "TP12"
+			(at 140.462 331.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 144.78 334.5179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 147.32 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 142.24 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53ab0370-b808-4c4b-b530-6538624cc464")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -21002,7 +22209,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e7ddb76-9f55-40e1-b1ed-b0dd48d02b1b")
-		(property "Reference" "C27"
+		(property "Reference" "C26"
 			(at 218.44 332.7399 0)
 			(effects
 				(font
@@ -21056,7 +22263,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C27")
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 280.67 425.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f088519-91c8-4b7a-8b81-bbafe332c2aa")
+		(property "Reference" "TP17"
+			(at 282.448 430.784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 278.13 427.4821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 275.59 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 275.59 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 280.67 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "342cea29-51e8-4de3-80ed-24d0f326c202")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -21072,7 +22346,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8f90a9ec-329e-4fb1-be3d-abaa74e83446")
-		(property "Reference" "C38"
+		(property "Reference" "C37"
 			(at 171.45 426.7199 0)
 			(effects
 				(font
@@ -21126,77 +22400,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 488.95 365.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "91738c6c-b189-48b5-b78e-392efc6b4024")
-		(property "Reference" "R15"
-			(at 491.49 364.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1M"
-			(at 491.49 367.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 487.172 365.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 488.95 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 488.95 365.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "99a60cc2-7257-4363-b12e-92213aecafe3")
-		)
-		(pin "1"
-			(uuid "c59a11e8-bb70-4baf-a281-7896c9c49c3f")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R15")
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -21212,7 +22416,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92525fb0-317c-43ac-9371-c8da3f3137f3")
-		(property "Reference" "C21"
+		(property "Reference" "C20"
 			(at 229.87 212.0899 0)
 			(effects
 				(font
@@ -21266,7 +22470,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C21")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -21282,7 +22486,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "950d17eb-d5cf-446b-94e4-af25dd9c2438")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR010"
 			(at 353.06 186.69 0)
 			(effects
 				(font
@@ -21332,7 +22536,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR013")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -21469,6 +22673,73 @@
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 477.52 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "98d81982-1df4-4a84-80cf-f53da2661631")
+		(property "Reference" "TP4"
+			(at 475.742 176.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 480.06 179.5779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 482.6 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 482.6 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 477.52 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92b1215a-3820-43ca-a123-abb535a13d47")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -21617,86 +22888,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push_DPDT")
-		(at 461.01 353.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e2b734b-3a21-4ac1-8119-daf32bfaa505")
-		(property "Reference" "SW2"
-			(at 461.01 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_DPDT"
-			(at 461.01 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 461.01 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 461.01 347.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Momentary Switch, dual pole double throw"
-			(at 461.01 353.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d9eceab6-4424-4aee-b965-70b9b3942380")
-		)
-		(pin "3"
-			(uuid "2197c210-6c9c-48e0-b91e-4b2f5ebe29c4")
-		)
-		(pin "1"
-			(uuid "11df0ccb-61f7-472b-a93b-4b82e35859a2")
-		)
-		(pin "6"
-			(uuid "cef448cf-b2e0-4223-bb04-893a8b80b322")
-		)
-		(pin "5"
-			(uuid "103fc314-2d0a-46cc-90f4-fab1f48f930a")
-		)
-		(pin "4"
-			(uuid "afa67f17-94f2-42c2-b534-b0e027b4af43")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 501.65 67.31 90)
 		(unit 1)
@@ -21773,7 +22964,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1f87794-b191-44b7-8e84-94c9da32a890")
-		(property "Reference" "R25"
+		(property "Reference" "R24"
 			(at 302.26 415.29 90)
 			(effects
 				(font
@@ -21825,7 +23016,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R25")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -21841,7 +23032,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a378b8b9-80b7-44ab-bdd3-4a2ec599c146")
-		(property "Reference" "C41"
+		(property "Reference" "C40"
 			(at 312.42 426.7199 0)
 			(effects
 				(font
@@ -21895,7 +23086,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C41")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -21911,7 +23102,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3ac7785-5dea-45c2-b387-a472d54eb192")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR014"
 			(at 113.03 228.6 0)
 			(effects
 				(font
@@ -21961,7 +23152,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR017")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -21977,7 +23168,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3c253a1-8a2f-44a2-ade8-2208e208f5a4")
-		(property "Reference" "C35"
+		(property "Reference" "C34"
 			(at 205.74 374.6499 0)
 			(effects
 				(font
@@ -22031,7 +23222,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C35")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -22047,7 +23238,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a53b9c67-ee25-4f95-8f20-b02771033ed7")
-		(property "Reference" "R19"
+		(property "Reference" "R18"
 			(at 236.22 373.3799 0)
 			(effects
 				(font
@@ -22101,7 +23292,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R19")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -22117,7 +23308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5819226-94c6-46df-9783-2e762c5d9464")
-		(property "Reference" "C31"
+		(property "Reference" "C29"
 			(at 138.43 351.7899 0)
 			(effects
 				(font
@@ -22171,77 +23362,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Crystal")
-		(at 570.23 351.79 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a7def731-bb5f-47a4-8964-9e384989fe91")
-		(property "Reference" "Y1"
-			(at 574.04 350.5199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "24 MHz"
-			(at 574.04 353.0599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 570.23 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 570.23 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Two pin crystal"
-			(at 570.23 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "43b6d9f0-3e65-4eb2-adf8-b83f44f669c5")
-		)
-		(pin "2"
-			(uuid "f43f5970-1fe6-4ac0-a0a8-27b7a6456754")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "Y1")
+					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -22257,7 +23378,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a80b293e-c419-4488-9e1f-94e814f4eba6")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR011"
 			(at 133.35 189.23 0)
 			(effects
 				(font
@@ -22307,7 +23428,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR014")
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 551.18 355.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b14ead8b-aa66-421c-8ad0-b7263113d976")
+		(property "Reference" "C30"
+			(at 546.1 354.584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10p"
+			(at 546.1 357.124 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 552.1452 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 551.18 355.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 551.18 355.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4900f2db-6df1-4fde-a35e-b3295d66f1eb")
+		)
+		(pin "2"
+			(uuid "7c142462-9503-4660-8922-af4c0c0094ab")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -22389,7 +23577,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b3603374-2755-4108-a320-fbbbc0002e96")
-		(property "Reference" "R14"
+		(property "Reference" "R13"
 			(at 236.22 332.7399 0)
 			(effects
 				(font
@@ -22443,7 +23631,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R14")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -22593,7 +23781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8be2fcf-a577-4071-bd9b-a4b755d1c539")
-		(property "Reference" "C28"
+		(property "Reference" "C27"
 			(at 205.74 334.0099 0)
 			(effects
 				(font
@@ -22647,7 +23835,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C28")
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -22663,7 +23851,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8f38e15-e950-48f7-8a60-66b989fa4b2c")
-		(property "Reference" "R6"
+		(property "Reference" "R5"
 			(at 181.61 187.96 90)
 			(effects
 				(font
@@ -22715,7 +23903,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R6")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -22730,7 +23918,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ba95c391-8eaf-41e0-96b2-e7ef8ca6172c")
-		(property "Reference" "R7"
+		(property "Reference" "R6"
 			(at 106.68 209.804 90)
 			(effects
 				(font
@@ -22782,7 +23970,80 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R7")
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 339.09 421.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bab616b6-0409-4e25-a908-6a7fa3522470")
+		(property "Reference" "RV7"
+			(at 336.55 420.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 336.55 422.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 338.836 410.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Slide Potentiometer"
+			(at 336.55 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "5387b4da-24c8-4499-ab0d-d063199f5b84")
+		)
+		(pin "2"
+			(uuid "966d9d5d-5c74-4022-ab00-dddc17ddd427")
+		)
+		(pin "1"
+			(uuid "eb267f27-c4ca-468c-89be-474f1800629e")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "RV7")
 					(unit 1)
 				)
 			)
@@ -22925,6 +24186,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 490.22 234.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc7ec223-98d0-4a5d-936f-6ea44f0813f3")
+		(property "Reference" "TP9"
+			(at 488.442 229.616 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 492.76 232.9179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 495.3 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 495.3 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 490.22 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc21c508-c0d0-49a5-ac0c-b6eef760a5bf")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_ARM_SWD_TagConnect_TC2030")
 		(at 440.69 67.31 0)
 		(unit 1)
@@ -23015,7 +24343,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bcfb927d-3291-4c18-ab12-7b9ac242f3f6")
-		(property "Reference" "C17"
+		(property "Reference" "C16"
 			(at 147.32 186.6899 0)
 			(effects
 				(font
@@ -23069,7 +24397,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C17")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -23140,79 +24468,6 @@
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 339.09 421.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bfe0ad9a-c558-45aa-9b21-26c00aaec2f3")
-		(property "Reference" "RV7"
-			(at 336.55 420.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "5k"
-			(at 336.55 422.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 338.836 410.464 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 336.55 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Slide Potentiometer"
-			(at 336.55 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1287bcda-cacb-4514-92a1-26254e71ba9d")
-		)
-		(pin "3"
-			(uuid "bdfd0db1-ae70-42a6-82e2-4d857c8ceca5")
-		)
-		(pin "2"
-			(uuid "b646e191-052c-490c-9257-e69127544a3a")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV7")
 					(unit 1)
 				)
 			)
@@ -23490,26 +24745,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 128.27 360.68 270)
+		(lib_id "Connector:TestPoint")
+		(at 92.71 425.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c98f0e20-deb5-4e08-a390-7f53918e339c")
-		(property "Reference" "#FLG04"
-			(at 130.175 360.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 132.08 360.6799 90)
+		(uuid "c8db0126-59c2-4a95-a5d3-5145458c0796")
+		(property "Reference" "TP13"
+			(at 94.488 430.784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23517,8 +24762,18 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 128.27 360.68 0)
+		(property "Value" "TestPoint"
+			(at 90.17 427.4821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 87.63 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23527,7 +24782,74 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 128.27 360.68 0)
+			(at 87.63 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 92.71 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5299a3b-9878-4470-8198-daf4e96c25bc")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 128.27 361.95 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c98f0e20-deb5-4e08-a390-7f53918e339c")
+		(property "Reference" "#FLG04"
+			(at 130.175 361.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 132.08 361.9499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 361.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 361.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23536,7 +24858,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 128.27 360.68 0)
+			(at 128.27 361.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23634,7 +24956,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d07b9271-6998-48fc-89da-fadf9fe61f5b")
-		(property "Reference" "R21"
+		(property "Reference" "R20"
 			(at 114.3 415.29 90)
 			(effects
 				(font
@@ -23686,7 +25008,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R21")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -23759,6 +25081,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 233.68 425.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4085d91-5b9f-4b7a-9156-51a72a6414c6")
+		(property "Reference" "TP16"
+			(at 235.458 430.784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 231.14 427.4821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 228.6 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 228.6 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 233.68 425.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1071960b-490d-4b35-9e82-852a5d1e6a84")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 363.22 241.3 0)
 		(unit 1)
@@ -23768,7 +25157,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d408ffda-cc7c-489d-ab09-d04beb8d7f0f")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR017"
 			(at 363.22 247.65 0)
 			(effects
 				(font
@@ -23818,7 +25207,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR020")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -23834,7 +25223,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d593d9e2-f430-4714-97b2-de2f4ca95d3d")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR029"
 			(at 165.1 369.57 0)
 			(effects
 				(font
@@ -23884,7 +25273,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR033")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -23957,17 +25346,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 572.77 175.26 0)
+		(lib_id "Device:R")
+		(at 445.77 359.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "dd9fd36c-e1dc-4aca-8402-9eda7cdb3f9c")
-		(property "Reference" "#PWR011"
-			(at 572.77 179.07 0)
+		(uuid "d83ebec3-9a94-4c74-95da-225dde5da726")
+		(property "Reference" "R15"
+			(at 448.31 358.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1M"
+			(at 448.31 360.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 443.992 359.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23975,16 +25382,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 572.77 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 572.77 175.26 0)
+		(property "Datasheet" "~"
+			(at 445.77 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23992,8 +25391,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 572.77 175.26 0)
+		(property "Description" "Resistor"
+			(at 445.77 359.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24001,22 +25400,86 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 572.77 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "2"
+			(uuid "4e352b86-576f-44e0-af0c-41a94a50b664")
 		)
 		(pin "1"
-			(uuid "d22e565a-78e4-4488-ab64-ea4782389920")
+			(uuid "e686fd71-2bc8-439b-a9d0-f81238cd1bcd")
 		)
 		(instances
-			(project ""
+			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR011")
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 520.7 359.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc6b7a41-03a3-4fb0-b566-0b82053d8bff")
+		(property "Reference" "R17"
+			(at 523.24 358.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1M"
+			(at 523.24 360.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 518.922 359.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 520.7 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 520.7 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f204dfdb-6d3c-461a-8f60-a77a47390e0c")
+		)
+		(pin "1"
+			(uuid "9e742f2e-508d-4104-bcf0-3ef3b7b5b7f8")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -24102,7 +25565,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e07b23f8-7105-4141-bcd0-5177e25d94e9")
-		(property "Reference" "R20"
+		(property "Reference" "R19"
 			(at 67.31 415.29 90)
 			(effects
 				(font
@@ -24154,146 +25617,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 57.15 421.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e0dc683a-d6f7-40e9-bd66-b794fd80f459")
-		(property "Reference" "RV1"
-			(at 54.61 420.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "5k"
-			(at 54.61 422.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 56.896 410.464 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Slide Potentiometer"
-			(at 54.61 421.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d1697ddd-87cf-423a-9593-8925b18643e1")
-		)
-		(pin "3"
-			(uuid "0fce71b3-5d70-4466-a545-86972e362aa5")
-		)
-		(pin "2"
-			(uuid "714519d5-809e-42ff-869a-e5a37fbcda88")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 542.29 354.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e39f3e59-4138-4980-8703-d0b085eec95f")
-		(property "Reference" "#PWR029"
-			(at 542.29 360.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 542.29 359.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 542.29 354.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 542.29 354.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 542.29 354.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aa2b6c48-7612-453c-a50d-1054d2893ecf")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR029")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -24512,7 +25836,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9af256c-c668-4106-a7fc-adec52f60ff7")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR033"
 			(at 334.01 386.08 0)
 			(effects
 				(font
@@ -24562,7 +25886,74 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR036")
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 482.6 234.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ea0c46e8-a592-4454-bf13-e2af90be983e")
+		(property "Reference" "TP7"
+			(at 480.822 229.616 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 485.14 232.9179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 487.68 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 487.68 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 482.6 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba2e8aeb-896e-4faa-9077-d3f757d856ca")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -24633,73 +26024,6 @@
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
 					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 595.63 177.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eb13f644-a239-42df-950e-9034f573644a")
-		(property "Reference" "TP1"
-			(at 598.17 173.2279 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 598.17 175.7679 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-			(at 600.71 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 600.71 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 595.63 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e9071340-5f04-439f-b326-1704a16a13c0")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -24785,7 +26109,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f05f7d0a-4cb5-49a5-8d57-c8c4fbad2a7a")
-		(property "Reference" "C23"
+		(property "Reference" "C22"
 			(at 229.87 224.7899 0)
 			(effects
 				(font
@@ -24839,42 +26163,42 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C23")
+					(reference "C22")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
-		(at 151.13 421.64 0)
+		(lib_id "Connector:TestPoint")
+		(at 139.7 425.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0cd6f07-cd0e-49f8-b459-3e06fc304482")
-		(property "Reference" "RV3"
-			(at 148.59 420.3699 0)
+		(uuid "f1810be2-3560-4f50-84c9-cab60d3f2637")
+		(property "Reference" "TP14"
+			(at 141.478 430.784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "5k"
-			(at 148.59 422.9099 0)
+		(property "Value" "TestPoint"
+			(at 137.16 427.4821 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
-			(at 150.876 410.464 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 134.62 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24882,8 +26206,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 148.59 421.64 0)
+		(property "Datasheet" "~"
+			(at 134.62 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24891,8 +26215,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Slide Potentiometer"
-			(at 148.59 421.64 0)
+		(property "Description" "test point"
+			(at 139.7 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24901,18 +26225,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b33c98c5-f6d0-4b90-bd19-d7f2000fea0a")
-		)
-		(pin "3"
-			(uuid "8bc0515f-0d8c-49b8-a02e-a390870d51e8")
-		)
-		(pin "2"
-			(uuid "d5beb406-fa98-49e0-ba81-d9a5c2c05292")
+			(uuid "205c1b89-9d6f-45b6-9e29-21e74c17972f")
 		)
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "RV3")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -24928,7 +26246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3dfd1d4-2ee5-4567-8df8-17a800cd0142")
-		(property "Reference" "C18"
+		(property "Reference" "C17"
 			(at 167.64 186.6899 0)
 			(effects
 				(font
@@ -24982,7 +26300,7 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C18")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -24998,7 +26316,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4d74005-51d9-4e03-be3a-9ef4936b70be")
-		(property "Reference" "C25"
+		(property "Reference" "C24"
 			(at 401.32 283.2099 0)
 			(effects
 				(font
@@ -25052,24 +26370,23 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C25")
+					(reference "C24")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 584.2 182.88 0)
+		(lib_id "Connector:TestPoint")
+		(at 374.65 425.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f53c7cbe-43b3-4f75-9a15-b27c8c1a5df9")
-		(property "Reference" "C16"
-			(at 588.01 181.6099 0)
+		(uuid "f51f383e-8e9a-46bc-8ced-553f87612cd3")
+		(property "Reference" "TP19"
+			(at 376.428 430.784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25077,17 +26394,18 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 588.01 184.1499 0)
+		(property "Value" "TestPoint"
+			(at 372.11 427.4821 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 585.1652 186.69 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 369.57 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25096,7 +26414,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 584.2 182.88 0)
+			(at 369.57 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25104,8 +26422,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 584.2 182.88 0)
+		(property "Description" "test point"
+			(at 374.65 425.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25114,15 +26432,85 @@
 			)
 		)
 		(pin "1"
-			(uuid "df8bf102-489b-42c3-8b37-053173ef40be")
-		)
-		(pin "2"
-			(uuid "119ad9b6-f11f-47ea-9a9f-48528c23f195")
+			(uuid "30235677-10c2-457a-8f8e-1ed5b1f58ba6")
 		)
 		(instances
-			(project ""
+			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C16")
+					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom_Potentiometers:PTA2043-2015CPB502")
+		(at 245.11 421.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f54c169a-c32e-4b07-a9a1-078820dcd8c7")
+		(property "Reference" "RV5"
+			(at 242.57 420.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 242.57 422.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom_Potentiometers:PTA2043-2015CPB502"
+			(at 244.856 410.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Slide Potentiometer"
+			(at 242.57 421.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "78121c76-c137-40d4-a361-c3a30019ee7b")
+		)
+		(pin "2"
+			(uuid "b22c1a09-ec07-431f-af47-3dce9fc85d46")
+		)
+		(pin "1"
+			(uuid "50f66c73-b664-4e6a-ab06-670e12c8548f")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "RV5")
 					(unit 1)
 				)
 			)
@@ -25196,6 +26584,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 382.27 162.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f60232ff-4fd4-4bf6-b6d6-c6d78ca2535d")
+		(property "Reference" "TP3"
+			(at 380.492 157.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 384.81 160.5279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 387.35 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 387.35 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 382.27 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9026e9dc-2a62-496d-ad9f-7ebe83223d6d")
+		)
+		(instances
+			(project "multi-band-equalizer"
+				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 92.71 181.61 0)
 		(unit 1)
@@ -25260,139 +26715,6 @@
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
 					(reference "C14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 561.34 358.14 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f9a8a0ff-6a42-493f-a863-f57471ba6de3")
-		(property "Reference" "C32"
-			(at 561.34 362.204 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C"
-			(at 561.34 364.744 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 557.53 359.1052 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 561.34 358.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 561.34 358.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b6fea4a7-1c5b-40e5-9f21-c7e73d70ed40")
-		)
-		(pin "2"
-			(uuid "8fdf287a-8397-434b-ae1f-7d8f2740ed9f")
-		)
-		(instances
-			(project "multi-band-equalizer"
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "C32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 565.15 175.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fa67076d-d75a-497f-ad45-b3265a35ba39")
-		(property "Reference" "#PWR010"
-			(at 565.15 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 565.15 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 565.15 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 565.15 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 565.15 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0d204a12-65a7-47d2-8247-cc301f3a56db")
-		)
-		(instances
-			(project ""
-				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524"
-					(reference "#PWR010")
 					(unit 1)
 				)
 			)
