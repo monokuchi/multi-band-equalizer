@@ -122,6 +122,9 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     __HAL_RCC_GPIOC_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     /**ADC1 GPIO Configuration
+    PA1     ------> ADC1_INP17
+    PA2     ------> ADC1_INP14
+    PA3     ------> ADC1_INP15
     PA4     ------> ADC1_INP18
     PA5     ------> ADC1_INP19
     PA6     ------> ADC1_INP3
@@ -131,17 +134,18 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     PB0     ------> ADC1_INP9
     PB1     ------> ADC1_INP5
     */
-    GPIO_InitStruct.Pin = CTRL_KNB_VOL_LVL_Pin|CTRL_KNB_100_HZ_Pin|CTRL_KNB_200_HZ_Pin|CTRL_KNB_400_HZ_Pin;
+    GPIO_InitStruct.Pin = CTRL_KNB_30_HZ_Pin|CTRL_KNB_60_HZ_Pin|CTRL_KNB_120_HZ_Pin|CTRL_KNB_200_HZ_Pin
+                          |CTRL_KNB_400_HZ_Pin|CTRL_KNB_800_HZ_Pin|CTRL_KNB_1600_HZ_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = CTRL_KNB_800_HZ_Pin|CTRL_KNB_1600_HZ_Pin;
+    GPIO_InitStruct.Pin = CTRL_KNB_3200_HZ_Pin|CTRL_KNB_6400_HZ_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = CTRL_KNB_3200_HZ_Pin|CTRL_KNB_6400_HZ_Pin;
+    GPIO_InitStruct.Pin = CTRL_KNB_12800_HZ_Pin|CTRL_KNB_VOL_LVL_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -193,6 +197,9 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     __HAL_RCC_ADC12_CLK_DISABLE();
 
     /**ADC1 GPIO Configuration
+    PA1     ------> ADC1_INP17
+    PA2     ------> ADC1_INP14
+    PA3     ------> ADC1_INP15
     PA4     ------> ADC1_INP18
     PA5     ------> ADC1_INP19
     PA6     ------> ADC1_INP3
@@ -202,11 +209,12 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     PB0     ------> ADC1_INP9
     PB1     ------> ADC1_INP5
     */
-    HAL_GPIO_DeInit(GPIOA, CTRL_KNB_VOL_LVL_Pin|CTRL_KNB_100_HZ_Pin|CTRL_KNB_200_HZ_Pin|CTRL_KNB_400_HZ_Pin);
+    HAL_GPIO_DeInit(GPIOA, CTRL_KNB_30_HZ_Pin|CTRL_KNB_60_HZ_Pin|CTRL_KNB_120_HZ_Pin|CTRL_KNB_200_HZ_Pin
+                          |CTRL_KNB_400_HZ_Pin|CTRL_KNB_800_HZ_Pin|CTRL_KNB_1600_HZ_Pin);
 
-    HAL_GPIO_DeInit(GPIOC, CTRL_KNB_800_HZ_Pin|CTRL_KNB_1600_HZ_Pin);
+    HAL_GPIO_DeInit(GPIOC, CTRL_KNB_3200_HZ_Pin|CTRL_KNB_6400_HZ_Pin);
 
-    HAL_GPIO_DeInit(GPIOB, CTRL_KNB_3200_HZ_Pin|CTRL_KNB_6400_HZ_Pin);
+    HAL_GPIO_DeInit(GPIOB, CTRL_KNB_12800_HZ_Pin|CTRL_KNB_VOL_LVL_Pin);
 
     /* ADC1 DMA DeInit */
     HAL_DMA_DeInit(hadc->DMA_Handle);

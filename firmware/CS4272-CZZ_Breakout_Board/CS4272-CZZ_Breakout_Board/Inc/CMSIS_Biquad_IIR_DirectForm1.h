@@ -29,7 +29,7 @@
  */
 #define IIR_DIRECT_FORM_1_NUM_STATES 4
 #define IIR_DIRECT_FORM_1_NUM_COEFFICIENTS 5
-#define IIR_DIRECT_FORM_1_NUM_STAGES 7 // Number of 2nd order stages in the IIR filter
+#define IIR_DIRECT_FORM_1_NUM_STAGES 10 // Number of 2nd order stages in the IIR filter (a.k.a number of cascaded IIR filters)
 
 
 

@@ -39,8 +39,8 @@
 #define AUDIO_DATA_BUFFER_SIZE  128
 #define AUDIO_SAMPLE_RATE_HZ 	48000.0f
 
-#define NUM_CTRL_KNOBS 		 8 // 7 Frequency Bands, 1 Volume Level
-#define NUM_FREQ_BANDS 		 7
+#define NUM_CTRL_KNOBS 		 11 // 10 Frequency Bands, 1 Volume Level
+#define NUM_FREQ_BANDS 		 10
 #define CTRL_KNOBS_DEADBAND  0.05f
 #define CTRL_KNOBS_EMA_ALPHA 0.85f // Alpha factor for EMA Low Pass Filter (Lower alpha -> Lower cutoff frequency)
 
@@ -88,13 +88,30 @@ EMAFilter ema_filters[NUM_CTRL_KNOBS];
 
 // Pre-defined fixed center frequencies for our peaking filters
 static const float peaking_filter_center_freqs[NUM_FREQ_BANDS] = {
-		100.0f,
+		30.0f,
+		60.0f,
+		120.0f,
 		200.0f,
 		400.0f,
 		800.0f,
 		1600.0f,
 		3200.0f,
-		6400.0f
+		6400.0f,
+		12800.0f
+};
+
+// Pre-defined fixed bandwidths for our peaking filters
+static const float peaking_filter_bandwidths[NUM_FREQ_BANDS] = {
+		5.0f,
+		10.0f,
+		20.0f,
+		40.0f,
+		100.0f,
+		145.0f,
+		240.0f,
+		500.0f,
+		1200.0f,
+		6000.0f
 };
 
 // Ping Pong buffers for our codec's ADC and DAC
@@ -188,6 +205,12 @@ void processControlKnobs()
 						peaking_filters_params[i].center_freq_hz = peaking_filter_center_freqs[i];
 					}
 
+					// Bandwidths are fixed and go from [5, 6000] Hz
+					if (peaking_filters_params[i].bandwidth_hz != peaking_filter_bandwidths[i])
+					{
+						peaking_filters_params[i].bandwidth_hz = peaking_filter_bandwidths[i];
+					}
+
 					// Update the filter gain
 //					peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE * ctrl_knobs_settings[i];
 					if (i == 2)
@@ -199,14 +222,6 @@ void processControlKnobs()
 						peaking_filters_params[i].gain_linear = 1.0f;
 					}
 
-					// Update the filter bandwidth
-//					peaking_filters_params[i].bandwidth_hz = (MAX_OUTPUT_BANDWIDTH_SCALE * ctrl_knobs_settings[i]) + 1.0f;
-//					if (peaking_filters_params[i].bandwidth_hz > peaking_filters_params[i].center_freq_hz)
-//					{
-//						// Since the center frequencies are not evenly spaced out we also need to make the bandwidth skewed
-//						peaking_filters_params[i].bandwidth_hz = peaking_filters_params[i].center_freq_hz;
-//					}
-					peaking_filters_params[i].bandwidth_hz = 50.0f;
 				}
 			}
 			else
@@ -460,7 +475,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.EOCSelection = ADC_EOC_SEQ_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 8;
+  hadc1.Init.NbrOfConversion = 11;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T2_TRGO;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
@@ -484,7 +499,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_19;
+  sConfig.Channel = ADC_CHANNEL_17;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_387CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
@@ -498,7 +513,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_3;
+  sConfig.Channel = ADC_CHANNEL_14;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -507,7 +522,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_7;
+  sConfig.Channel = ADC_CHANNEL_15;
   sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -516,7 +531,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_4;
+  sConfig.Channel = ADC_CHANNEL_18;
   sConfig.Rank = ADC_REGULAR_RANK_4;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -525,7 +540,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Channel = ADC_CHANNEL_19;
   sConfig.Rank = ADC_REGULAR_RANK_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -534,7 +549,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_9;
+  sConfig.Channel = ADC_CHANNEL_3;
   sConfig.Rank = ADC_REGULAR_RANK_6;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -543,7 +558,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_7;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -552,8 +567,35 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_18;
+  sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_8;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Rank = ADC_REGULAR_RANK_9;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_9;
+  sConfig.Rank = ADC_REGULAR_RANK_10;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Rank = ADC_REGULAR_RANK_11;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
