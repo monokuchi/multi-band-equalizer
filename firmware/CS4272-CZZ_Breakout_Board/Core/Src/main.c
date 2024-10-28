@@ -44,9 +44,9 @@
 #define CTRL_KNOBS_DEADBAND  0.05f
 #define CTRL_KNOBS_EMA_ALPHA 0.85f // Alpha factor for EMA Low Pass Filter (Lower alpha -> Lower cutoff frequency)
 
-#define MAX_OUTPUT_VOLUME_SCALE 4.0f
-#define MAX_OUTPUT_GAIN_SCALE 5.0f
-#define MAX_OUTPUT_BANDWIDTH_SCALE 1000.0f
+#define MAX_OUTPUT_VOLUME_SCALE 2.0f
+#define MAX_FILTER_GAIN_SCALE 4.0f // Must be positive
+#define MIN_FILTER_GAIN_SCALE 0.25f // Must be positive
 
 #define ADC_RAW_NORMALIZATION_FACTOR 65535 // 2^16 - 1
 #define INT32_TO_FLOAT 				 4.6566128752e-10f // 1 / (2^(32-1) - 1)
@@ -195,7 +195,7 @@ void processControlKnobs()
 
 			if (i != NUM_CTRL_KNOBS-1)
 			{
-				if (fabs(ctrl_knobs_settings[i]-prev_ctrl_knobs_settings[i]) > CTRL_KNOBS_DEADBAND || 1)
+				if (fabs(ctrl_knobs_settings[i]-prev_ctrl_knobs_settings[i]) > CTRL_KNOBS_DEADBAND)
 				{
 					// If we are past the deadband then update our filter_params
 
@@ -212,23 +212,22 @@ void processControlKnobs()
 					}
 
 					// Update the filter gain
-//					peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE * ctrl_knobs_settings[i];
-					if (i == 2)
-					{
-						peaking_filters_params[i].gain_linear = MAX_OUTPUT_GAIN_SCALE;
-					}
-					else
-					{
-						peaking_filters_params[i].gain_linear = 1.0f;
-					}
+					peaking_filters_params[i].gain_linear = ((MAX_FILTER_GAIN_SCALE - MIN_FILTER_GAIN_SCALE) * ctrl_knobs_settings[i]) + MIN_FILTER_GAIN_SCALE;
+//					if (i == 4)
+//					{
+//						peaking_filters_params[i].gain_linear = ((MAX_FILTER_GAIN_SCALE - MIN_FILTER_GAIN_SCALE) * ctrl_knobs_settings[i]) + MIN_FILTER_GAIN_SCALE;
+//					}
+//					else
+//					{
+//						peaking_filters_params[i].gain_linear = 1.0f;
+//					}
 
 				}
 			}
 			else
 			{
-				// Set output_level
-//				output_volume_level = MAX_OUTPUT_VOLUME_SCALE * ctrl_knobs_settings[i];
-				output_volume_level = 1.0f;
+				// Update the output_volume_level
+				output_volume_level = MAX_OUTPUT_VOLUME_SCALE * ctrl_knobs_settings[i];
 			}
 
 			// Update the prev_ctrl_knobs_settings
@@ -380,7 +379,7 @@ int main(void)
 //	  {
 //		  if (i == 2)
 //		  {
-//			  sprintf(uart_buff, "Control Knob %i Normalized Value: %lf \r\n", i+1, ctrl_knobs_settings[i]);
+//			  sprintf(uart_buff, "Control Knob %i Normalized Value: %f \r\n", i+1, ctrl_knobs_settings[i]);
 //			  HAL_UART_Transmit(&huart3, (uint8_t *) uart_buff, strlen(uart_buff), HAL_MAX_DELAY);
 //		  }
 //	  }
