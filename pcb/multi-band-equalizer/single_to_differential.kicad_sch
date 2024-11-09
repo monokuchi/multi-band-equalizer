@@ -1685,7 +1685,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09ef85b4-6be2-4fdb-8933-3a10d02fd730")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR048"
 			(at 130.81 50.8 0)
 			(effects
 				(font
@@ -1735,11 +1735,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR047")
+					(reference "#PWR048")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR037")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -1829,7 +1829,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "103f3993-9822-4e2d-b524-739a10921ddc")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR056"
 			(at 195.58 105.41 0)
 			(effects
 				(font
@@ -1879,11 +1879,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR055")
+					(reference "#PWR056")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR045")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -1899,7 +1899,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c06d629-9520-438f-988c-3cc9c569c879")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR051"
 			(at 158.75 69.85 0)
 			(effects
 				(font
@@ -1949,11 +1949,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR050")
+					(reference "#PWR051")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR040")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -2043,7 +2043,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d7e84a3-c59e-4f8e-aee3-508803666073")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR052"
 			(at 233.68 80.01 0)
 			(effects
 				(font
@@ -2093,11 +2093,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR051")
+					(reference "#PWR052")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR041")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -2349,7 +2349,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b2b6fab-9a3c-4f2d-afa4-7702e8deaec4")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR053"
 			(at 66.04 102.87 0)
 			(effects
 				(font
@@ -2399,11 +2399,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR052")
+					(reference "#PWR053")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR042")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -2493,7 +2493,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7cc9c794-b68d-481c-af16-412658042a9c")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR057"
 			(at 195.58 144.78 0)
 			(effects
 				(font
@@ -2543,11 +2543,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR056")
+					(reference "#PWR057")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR046")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -2797,7 +2797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ec1a125-6486-46ab-9d3c-f6818e27d2db")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR049"
 			(at 233.68 57.15 0)
 			(effects
 				(font
@@ -2847,11 +2847,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR048")
+					(reference "#PWR049")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR038")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -2867,7 +2867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a956e847-c2ad-4443-8aa5-6cca14e1ced4")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR055"
 			(at 105.41 102.87 0)
 			(effects
 				(font
@@ -2917,11 +2917,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR054")
+					(reference "#PWR055")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR044")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -2937,7 +2937,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab1b6bb7-e9ab-4c5c-8421-ad0d05bbc672")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR050"
 			(at 256.54 63.5 0)
 			(effects
 				(font
@@ -2987,11 +2987,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR049")
+					(reference "#PWR050")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -3099,7 +3099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1c7754a-c1a3-470d-ace3-58e9ab6fef4e")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR054"
 			(at 85.09 102.87 0)
 			(effects
 				(font
@@ -3149,11 +3149,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/45ab872a-c810-43fb-b03d-ad8b0d23cb6b"
-					(reference "#PWR053")
+					(reference "#PWR054")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/838129ab-a80a-454e-bedd-d4d19cd21db9"
-					(reference "#PWR043")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)

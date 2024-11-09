@@ -1607,7 +1607,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0bdd2d05-f4b6-465f-8d84-036883a4c64e")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR079"
 			(at 187.96 121.92 0)
 			(effects
 				(font
@@ -1657,11 +1657,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR078")
+					(reference "#PWR079")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR071")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -1822,7 +1822,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2d7a2208-2611-4260-a700-71b32a14cb38")
-		(property "Reference" "#PWR074"
+		(property "Reference" "#PWR075"
 			(at 74.93 90.17 0)
 			(effects
 				(font
@@ -1872,11 +1872,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR074")
+					(reference "#PWR075")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR067")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -2105,7 +2105,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6fb87aef-746c-4697-815b-46c664624a95")
-		(property "Reference" "#PWR076"
+		(property "Reference" "#PWR077"
 			(at 246.38 95.25 0)
 			(effects
 				(font
@@ -2155,11 +2155,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR076")
+					(reference "#PWR077")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR069")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -2482,7 +2482,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a47e62c7-7c4f-4c33-a10f-54d34838e6cc")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR081"
 			(at 146.05 124.46 0)
 			(effects
 				(font
@@ -2532,11 +2532,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR080")
+					(reference "#PWR081")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR073")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -2838,7 +2838,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be532048-00c8-4ace-8412-b1e12499cdaf")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR080"
 			(at 74.93 123.19 0)
 			(effects
 				(font
@@ -2888,11 +2888,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR079")
+					(reference "#PWR080")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR072")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -3211,7 +3211,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0e31241-d828-4abc-9d20-cf01170b299a")
-		(property "Reference" "#PWR075"
+		(property "Reference" "#PWR076"
 			(at 223.52 88.9 0)
 			(effects
 				(font
@@ -3261,11 +3261,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR075")
+					(reference "#PWR076")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR068")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -3281,7 +3281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed499bc8-daa1-417d-9e11-54f38d65ab3b")
-		(property "Reference" "#PWR077"
+		(property "Reference" "#PWR078"
 			(at 223.52 111.76 0)
 			(effects
 				(font
@@ -3331,11 +3331,11 @@
 		(instances
 			(project "multi-band-equalizer"
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/0812df87-8f2b-4ce4-aa43-72c13c493f22"
-					(reference "#PWR077")
+					(reference "#PWR078")
 					(unit 1)
 				)
 				(path "/a5803ad9-a9e5-4a2c-ab35-f101ba189524/acb16c71-e1a0-46fa-9ce3-74bbbdca6343"
-					(reference "#PWR070")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
