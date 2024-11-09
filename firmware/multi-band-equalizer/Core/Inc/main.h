@@ -79,14 +79,14 @@ void Error_Handler(void);
 #define CTRL_KNB_60_HZ_GPIO_Port GPIOB
 #define CTRL_KNB_30_HZ_Pin GPIO_PIN_1
 #define CTRL_KNB_30_HZ_GPIO_Port GPIOB
-#define LED_STATUS_RED_Pin GPIO_PIN_15
+#define CODEC_NRST_Pin GPIO_PIN_8
+#define CODEC_NRST_GPIO_Port GPIOE
+#define LED_STATUS_RED_Pin GPIO_PIN_12
 #define LED_STATUS_RED_GPIO_Port GPIOE
 #define I2S2_LRCK_Pin GPIO_PIN_12
 #define I2S2_LRCK_GPIO_Port GPIOB
 #define I2S2_SCLK_Pin GPIO_PIN_13
 #define I2S2_SCLK_GPIO_Port GPIOB
-#define CODEC_NRST_Pin GPIO_PIN_9
-#define CODEC_NRST_GPIO_Port GPIOD
 #define I2S2_MCLK_Pin GPIO_PIN_6
 #define I2S2_MCLK_GPIO_Port GPIOC
 
