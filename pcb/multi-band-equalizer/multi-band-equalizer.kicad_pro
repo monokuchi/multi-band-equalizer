@@ -665,7 +665,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "References/pcb_layers",
+      "plot": "Manufacturing/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
