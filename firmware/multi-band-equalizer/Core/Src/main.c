@@ -204,15 +204,6 @@ void processControlKnobs()
 
 					// Update the filter gain
 					peaking_filters_params[i].gain_linear = ((MAX_FILTER_GAIN_SCALE - MIN_FILTER_GAIN_SCALE) * ctrl_knobs_settings[i]) + MIN_FILTER_GAIN_SCALE;
-//					if (i == 4)
-//					{
-//						peaking_filters_params[i].gain_linear = ((MAX_FILTER_GAIN_SCALE - MIN_FILTER_GAIN_SCALE) * ctrl_knobs_settings[i]) + MIN_FILTER_GAIN_SCALE;
-//					}
-//					else
-//					{
-//						peaking_filters_params[i].gain_linear = 1.0f;
-//					}
-
 				}
 			}
 			else
@@ -329,7 +320,12 @@ int main(void)
   HAL_TIM_Base_Start(&htim1);
 
   // Initialize our codec
-  CS4272_Init(&codec, &hi2c2);
+  uint8_t status = CS4272_Init(&codec, &hi2c2);
+  if (status != 0)
+  {
+	  // Error
+	  HAL_GPIO_WritePin(LED_STATUS_RED_GPIO_Port, LED_STATUS_RED_Pin, GPIO_PIN_SET);
+  }
   // Initialize our IIR Peaking Filters
   PeakingFilter_Init_CMSIS(&left_iir_filter, AUDIO_SAMPLE_RATE_HZ);
   PeakingFilter_Init_CMSIS(&right_iir_filter, AUDIO_SAMPLE_RATE_HZ);
@@ -350,9 +346,7 @@ int main(void)
 	  if (audio_buff_samples_rdy)
 	  {
 		  // Buffers are initialized with audio data, we can process the data now
-//		  HAL_GPIO_WritePin(GPIO_STATUS_GPIO_Port, GPIO_STATUS_Pin, GPIO_PIN_SET);
 		  processAudioData();
-//		  HAL_GPIO_WritePin(GPIO_STATUS_GPIO_Port, GPIO_STATUS_Pin, GPIO_PIN_RESET);
 	  }
 
 	  if (ctrl_knobs_adc_samples_rdy)

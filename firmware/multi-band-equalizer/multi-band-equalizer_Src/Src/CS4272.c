@@ -34,7 +34,7 @@ const uint8_t CS4272_REGISTERS[CS4272_NUM_REGISTERS] = {
 
 
 uint8_t CS4272_REGISTERS_INIT_CONFIG[CS4272_NUM_REGISTERS] = {
-																  0x29, 	  						            // Single Speed Mode, MCLK/LRCK=512 and SCLK/LRCK=64, Master Mode, DAC Digital Interface Format (I2S, 24 bit)
+																  0x21, 	  						            // Single Speed Mode, MCLK/LRCK=512 and SCLK/LRCK=64, Slave Mode, DAC Digital Interface Format (I2S, 24 bit)
 																  0x80, 									    // Auto Mute
 																  0x29, 									    // Soft Ramp, ATAPI Channel Mixing (AOUTA=aL, AOUTB=bR)
 																  0x00,
@@ -98,7 +98,7 @@ uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c)
 	 * Check the codec Chip ID/Revision to see if we are communicating with the right device
 	 */
 	status = CS4272_Read_Register(dev, CS4272_REG_CHIP_ID, &reg_data);
-	if (status != HAL_OK || reg_data != ((CS4272_CHIP_ID << 4) | CS4272_CHIP_REV)) { return 255; }
+	if (status != HAL_OK || reg_data != ((CS4272_CHIP_ID << 4) | CS4272_CHIP_REV)) { return 254; }
 
 
 
@@ -121,7 +121,7 @@ uint8_t CS4272_Init(CS4272 *dev, I2C_HandleTypeDef *i2c)
 	 * Update the register_map with the current state of all the registers
 	 */
 	status = CS4272_Read_All_Registers(dev, dev->register_map);
-	if (status != HAL_OK) { return 255; }
+	if (status != HAL_OK) { return 253; }
 
 
 	/*
